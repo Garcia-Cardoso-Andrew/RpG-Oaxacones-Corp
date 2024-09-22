@@ -10,16 +10,16 @@ public class Game {
         this.enemy = enemy;
     }
 
-    // Método para iniciar el juego
+    /*Método para iniciar el juego*/
     public void startGame() {
         System.out.println("¡El juego ha comenzado!");
 
-        // Mostrar los nombres de los participantes
+        /* Mostrar los nombres de los participantes*/
         System.out.println(player.getName() + " vs " + enemy.getName());
 
-        // Ciclo que continúa hasta que uno de los dos pierda todos los puntos de vida
+        /* Ciclo que continúa hasta que uno de los dos pierda todos los puntos de vida*/
         while (player.getStat(Stats.HP) > 0 && enemy.getStat(Stats.HP) > 0) {
-            // Turno del jugador
+            /* Turno del jugador*/
             System.out.println("\nTurno de " + player.getName());
             player.attack(enemy);
             if (enemy.getStat(Stats.HP) <= 0) {
@@ -27,7 +27,7 @@ public class Game {
                 break;
             }
 
-            // Turno del enemigo
+            /* Turno del enemigo*/
             System.out.println("\nTurno de " + enemy.getName());
             enemy.attack(player);
             if (player.getStat(Stats.HP) <= 0) {
@@ -36,7 +36,7 @@ public class Game {
             }
         }
 
-        // Mostrar el resultado final
+        /*Mostrar el resultado final*/
         if (player.getStat(Stats.HP) > 0) {
             System.out.println("\n¡" + player.getName() + " ha ganado el juego!");
         } else {
