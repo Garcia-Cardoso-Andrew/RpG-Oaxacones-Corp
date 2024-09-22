@@ -4,8 +4,7 @@ class Enemy {
     private int attackPower;
     private String type;
     private String description;
-
-    // Constructor
+/*Class*/
     public Enemy(String name) {
         this.name = name;
         this.health = 0; // Salud del Raptor
@@ -14,7 +13,7 @@ class Enemy {
         this.description = "Un género de dinosaurios carnívoros bípedos con garras afiladas.";
     }
 
-    // Métodos
+    /* Métodos */ 
     public boolean isAlive() {
         return health > 0;
     }
