@@ -1,3 +1,4 @@
+import java.util.HashMap;
 class Enemy {
     private String name;
     private int health;
