@@ -4,16 +4,30 @@ class Enemy {
     private int attackPower;
     private String type;
     private String description;
-/*Class*/
-    public Enemy(String name) {
+
+    /* Constructor para enemigos */
+    public Enemy(String name, String type) {
         this.name = name;
-        this.health = 0; // Salud del Raptor
-        this.attackPower = 0; // Poder de ataque del Raptor
-        this.type = "Raptor";
-        this.description = "Un género de dinosaurios carnívoros bípedos con garras afiladas.";
+        this.type = type;
+
+        if (type.equals("Raptor")) {
+            this.health = 0; // Salud del Raptor
+            this.attackPower = 0; // Poder de ataque del Raptor
+            this.description = "Un género de dinosaurios carnívoros bípedos con garras afiladas.";
+        } else if (type.equals("Rex")) {
+            this.health = 0; // Salud del Rex
+            this.attackPower = 0; // Poder de ataque del Rex
+            this.description = "Un dinosaurio carnívoro gigante, conocido por su gran fuerza y tamaño.";
+        } else if (type.equals("Therizino")) {
+            this.health = 0; // Salud del Therizinosaurus
+            this.attackPower = 0; // Poder de ataque del Therizinosaurus
+            this.description = "Un dinosaurio herbívoro con garras enormes, conocido por su extraño aspecto.";
+        } else {
+            throw new IllegalArgumentException("Tipo de enemigo no válido");
+        }
     }
 
-    /* Métodos */ 
+    // Métodos
     public boolean isAlive() {
         return health > 0;
     }
@@ -40,3 +54,4 @@ class Enemy {
         System.out.println("Enemigo: " + name + " | Tipo: " + type + " | " + description);
     }
 }
+
