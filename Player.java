@@ -1,5 +1,5 @@
 import java.util.HashMap;
-public class Personaje {
+public class Player {
         private String name;
         private HashMap<Stats, Integer> stats = new HashMap<>();
 
