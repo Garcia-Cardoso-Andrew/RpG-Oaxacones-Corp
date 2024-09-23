@@ -64,3 +64,29 @@ public class Game {
         enemy.attack(player);
     }
 }
+/* parte de preuba y funconalidad de game */
+class GameLauncher { 
+    public static void main(String[] args) {
+        // Crear un jugador usando una ventana emergente para obtener el nombre
+        String playerName = JOptionPane.showInputDialog("Introduce el nombre del jugador:");
+        if (playerName == null || playerName.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nombre no válido. El juego se cerrará.");
+            System.exit(0);
+        }
+
+        // Crear el jugador con nombre, salud inicial de 100 y poder de ataque de 30
+        Player player = new Player(playerName, 100, 30);
+
+        // Crear una lista de enemigos
+        List<Enemy> enemies = new ArrayList<>();
+        enemies.add(new Enemy("Raptor1", "Raptor"));
+        enemies.add(new Enemy("Rex1", "Rex"));
+        enemies.add(new Enemy("Therizino1", "Therizino"));
+
+        // Inicializar el juego con el jugador y la lista de enemigos
+        Game game = new Game(player, enemies);
+
+        // Iniciar el juego
+        game.startGame();
+    }
+}
