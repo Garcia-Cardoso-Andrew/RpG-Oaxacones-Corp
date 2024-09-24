@@ -79,9 +79,9 @@ class GameLauncher {
 
         // Crear una lista de enemigos
         List<Enemy> enemies = new ArrayList<>();
-        enemies.add(new Enemy("Raptor1", "Raptor"));
-        enemies.add(new Enemy("Rex1", "Rex"));
-        enemies.add(new Enemy("Therizino1", "Therizino"));
+        enemies.add(new Enemy("Raptor", "Raptor"));
+        enemies.add(new Enemy("Rex", "Rex"));
+        enemies.add(new Enemy("Therizino", "Therizino"));
 
         // Inicializar el juego con el jugador y la lista de enemigos
         Game game = new Game(player, enemies);
