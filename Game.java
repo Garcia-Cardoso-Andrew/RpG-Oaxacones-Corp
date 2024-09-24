@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
@@ -65,7 +66,7 @@ public class Game {
     }
 }
 /* parte de preuba y funconalidad de game */
-class GameLauncher { 
+class GameLauncher {
     public static void main(String[] args) {
         // Crear un jugador usando una ventana emergente para obtener el nombre
         String playerName = JOptionPane.showInputDialog("Introduce el nombre del jugador:");
@@ -81,7 +82,7 @@ class GameLauncher {
         List<Enemy> enemies = new ArrayList<>();
         enemies.add(new Enemy("Raptor", "Raptor"));
         enemies.add(new Enemy("Rex", "Rex"));
-        enemies.add(new Enemy("Therizino", "Therizino"));
+        enemies.add(new Enemy("Therizino1", "Therizino"));
 
         // Inicializar el juego con el jugador y la lista de enemigos
         Game game = new Game(player, enemies);
