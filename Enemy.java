@@ -1,4 +1,5 @@
-/* Interfaces de los Enemigos */
+/* Clase Enemy que representa las estadísticas de los Enemigos */
+/* Mantiene las estadísticas de los enemigos, su ataque y su estado actual */
 public class Enemy {
     private String name;
     private int health;
