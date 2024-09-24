@@ -12,16 +12,16 @@ public class Enemy {
 
         // Asignar salud y poder de ataque según el tipo de enemigo
         if (type.equals("Raptor")) {
-            this.health = 100; // Salud del Raptor
+            this.health = 50; // Salud del Raptor
             this.attackPower = 20; // Poder de ataque del Raptor
             this.description = "Un género de dinosaurios carnívoros bípedos con garras afiladas.";
         } else if (type.equals("Rex")) {
-            this.health = 150; // Salud del Rex
-            this.attackPower = 30; // Poder de ataque del Rex
+            this.health = 100; // Salud del Rex
+            this.attackPower = 40; // Poder de ataque del Rex
             this.description = "Un dinosaurio carnívoro gigante, conocido por su gran fuerza y tamaño.";
         } else if (type.equals("Therizino")) {
-            this.health = 150; // Salud del Therizinosaurus
-            this.attackPower = 30; // Poder de ataque del Therizinosaurus
+            this.health = 80; // Salud del Therizinosaurus
+            this.attackPower = 60; // Poder de ataque del Therizinosaurus
             this.description = "Un dinosaurio herbívoro con garras enormes, conocido por su extraño aspecto.";
         } else {
             throw new IllegalArgumentException("Tipo de enemigo no válido");
@@ -61,4 +61,3 @@ public class Enemy {
         System.out.println("Enemigo: " + name + " | Tipo: " + type + " | " + description + " | Salud: " + health + " | Poder de ataque: " + attackPower);
     }
 }
-
