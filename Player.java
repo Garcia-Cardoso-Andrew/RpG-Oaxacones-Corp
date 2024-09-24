@@ -1,3 +1,7 @@
+/**
+ * Clase Player que representa al jugador en el juego.
+ * Gestiona las estadísticas del jugador, ataques y el estado actual.
+ */
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
 
