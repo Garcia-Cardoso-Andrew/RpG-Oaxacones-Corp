@@ -1,3 +1,4 @@
+/* Interfaces de los Enemigos */
 public class Enemy {
     private String name;
     private int health;
