@@ -16,8 +16,8 @@ public class Enemy {
             this.attackPower = 20; // Poder de ataque del Raptor
             this.description = "Un género de dinosaurios carnívoros bípedos con garras afiladas.";
         } else if (type.equals("Rex")) {
-            this.health = 200; // Salud del Rex
-            this.attackPower = 40; // Poder de ataque del Rex
+            this.health = 150; // Salud del Rex
+            this.attackPower = 30; // Poder de ataque del Rex
             this.description = "Un dinosaurio carnívoro gigante, conocido por su gran fuerza y tamaño.";
         } else if (type.equals("Therizino")) {
             this.health = 150; // Salud del Therizinosaurus
