@@ -3,6 +3,8 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/* Clase Game que representa la interfaz de el juego */
+/* Gestiona el tiempo y estadisticas de el juego, junto con los enemigos y el jugador */
 public class Game {
     private Player player;
     private List<Enemy> enemies;
@@ -68,7 +70,7 @@ public class Game {
         enemy.attack(player);
     }
 }
-/* parte de preuba y funconalidad de game */
+/* parte de prueba y funcionalidad de game */
 class GameLauncher {
 
     public static void main(String[] args) {
