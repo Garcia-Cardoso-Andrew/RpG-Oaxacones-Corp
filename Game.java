@@ -7,6 +7,8 @@ public class Game {
     private Player player;
     private List<Enemy> enemies;
 
+    //Construcción del Juego
+    
     /* Constructor que inicializa el jugador y una lista de enemigos */
     public Game(Player player, List<Enemy> enemies) {
         this.player = player;
