@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +68,12 @@ public class Game {
 }
 /* parte de preuba y funconalidad de game */
 class GameLauncher {
+
     public static void main(String[] args) {
+        // Configurar la fuente a Times New Roman para todas las ventanas emergentes
+        UIManager.put("OptionPane.messageFont", new Font("Times New Roman", Font.PLAIN, 14));
+        UIManager.put("OptionPane.buttonFont", new Font("Times New Roman", Font.PLAIN, 14));
+
         // Crear un jugador usando una ventana emergente para obtener el nombre
         String playerName = JOptionPane.showInputDialog("Introduce el nombre del jugador:");
         if (playerName == null || playerName.isEmpty()) {
@@ -82,7 +88,7 @@ class GameLauncher {
         List<Enemy> enemies = new ArrayList<>();
         enemies.add(new Enemy("Raptor", "Raptor"));
         enemies.add(new Enemy("Rex", "Rex"));
-        enemies.add(new Enemy("Therizino1", "Therizino"));
+        enemies.add(new Enemy("Therizino", "Therizino"));
 
         // Inicializar el juego con el jugador y la lista de enemigos
         Game game = new Game(player, enemies);
