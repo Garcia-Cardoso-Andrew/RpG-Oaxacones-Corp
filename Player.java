@@ -1,6 +1,7 @@
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
 
+//Estadisticas del Jugador
 public class Player {
 
     private String name;
