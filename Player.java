@@ -1,67 +1,66 @@
 import java.util.EnumMap;
+import javax.swing.JOptionPane;
 
 public class Player {
 
     private String name;
     private EnumMap<Stats, Integer> stats;
 
-    // Constructor that initializes the player with name and stats
+    /* Constructor que inicializa el jugador con su nombre y estadísticas */
     public Player(String name, int health, int attackPower) {
         this.name = name;
-        this.stats = new EnumMap<>(Stats.class); // Use EnumMap for type safety
+        this.stats = new EnumMap<>(Stats.class); // Usar EnumMap para seguridad de tipo
         this.stats.put(Stats.HP, health);
         this.stats.put(Stats.ATTACK, attackPower);
     }
 
-    // Getter for name
+    /* Método getter para obtener el nombre */
     public String getName() {
         return name;
     }
 
-    // Check if the player is alive (health > 0)
+    /* Verificar si el jugador está vivo (salud > 0) */
     public boolean isAlive() {
-        return getStat(Stats.HP) > 0; // Use getStat method for consistency
+        return getStat(Stats.HP) > 0; // Usar el método getStat para consistencia
     }
 
-    // Attack an enemy
+    /* Método para atacar a un enemigo */
     public void attack(Enemy enemy) {
         int attackPower = getStat(Stats.ATTACK);
-        System.out.println(name + " ataca a " + enemy.getName() + " por " + attackPower + " de daño!");
+        JOptionPane.showMessageDialog(null, name + " ataca a " + enemy.getName() + " por " + attackPower + " de daño!");
         enemy.takeDamage(attackPower);
     }
 
-    // Take damage from an enemy
+    /* Método para recibir daño de un enemigo */
     public void takeDamage(int damage) {
         int currentHealth = getStat(Stats.HP);
         currentHealth -= damage;
         if (currentHealth < 0) {
-            currentHealth = 0; // Prevent negative health
+            currentHealth = 0; // Evitar salud negativa
         }
-        putStat(Stats.HP, currentHealth); // Use putStat method for consistency
-        System.out.println(name + " recibe " + damage + " de daño. Salud restante: " + currentHealth);
+        putStat(Stats.HP, currentHealth); // Usar putStat para consistencia
+        JOptionPane.showMessageDialog(null, name + " recibe " + damage + " de daño. Salud restante: " + currentHealth);
     }
 
-    // Get the value of a specific stat
+    /* Obtener el valor de una estadística específica */
     public int getStat(Stats stat) {
         return stats.get(stat);
     }
 
-    // Set the value of a specific stat (consider adding logic for validation if needed)
+    /* Establecer el valor de una estadística específica */
     public void putStat(Stats stat, int value) {
         stats.put(stat, value);
     }
 
-    // Display the player's information
+    /* Mostrar la información del jugador en una ventana emergente */
     public void displayInfo() {
-        System.out.println("Jugador: " + name + " | Salud: " + getStat(Stats.HP) + " | Poder de ataque: " + getStat(Stats.ATTACK));
+        String info = "Jugador: " + name + "\nSalud: " + getStat(Stats.HP) + "\nPoder de ataque: " + getStat(Stats.ATTACK);
+        JOptionPane.showMessageDialog(null, info, "Estadísticas del jugador", JOptionPane.INFORMATION_MESSAGE);
     }
-
-    // Add additional methods as needed (e.g., heal, level up, manage inventory)
 }
 
+/* Enum que define las estadísticas del jugador */
 enum Stats {
-    HP,
-    ATTACK,
-    // Add more stats as needed (e.g., DEFENSE, MANA)
+    ATTACK,  // Poder de ataque
+    HP       // Salud
 }
-
