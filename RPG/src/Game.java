@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+package rpg.entities.enemies;
+
+import rpg.entities.Player;
 
 /* Clase Game que representa la interfaz de el juego */
 /* Gestiona el tiempo y estadisticas de el juego, junto con los enemigos y el jugador */
