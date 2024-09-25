@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+package rpg.entities.enemies;
+
+import rpg.entities.Player;
 
 public class Main {
     public static void main(String[] args) {
