@@ -1,5 +1,5 @@
 public enum Stats {
-    HEALTH,
+    HP,
     ATTACK,
     DEFENSE,
     SPEED,
