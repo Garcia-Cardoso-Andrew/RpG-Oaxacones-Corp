@@ -1,3 +1,4 @@
+package rpg.entities;
 import rpg.enums.Stats;
 
 import java.util.HashMap;
