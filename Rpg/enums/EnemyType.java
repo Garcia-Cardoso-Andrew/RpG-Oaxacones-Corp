@@ -1,5 +1,5 @@
 public enum EnemyType {
-    Basic,
+    BASIC,
     MEDIUM,
     BOSS,
     SECRET,
