@@ -1,6 +1,7 @@
 /* Clase Enemy que representa las estadísticas de los Enemigos */
 /* Mantiene las estadísticas de los enemigos, su ataque y su estado actual */
 public class Enemy {
+    
     private String name;
     private int health;
     private int attackPower;
@@ -63,3 +64,62 @@ public class Enemy {
         System.out.println("Enemigo: " + name + " | Tipo: " + type + " | " + description + " | Salud: " + health + " | Poder de ataque: " + attackPower);
     }
 }
+-------------------
+ package rpg.entities.enemies;
+
+import rpg.entities.GameCharacter;
+import rpg.enums.Stats;
+
+public abstract class Enemy extends GameCharacter {
+
+    protected EnemyType type;
+
+    public Enemy(String name) {
+        super(name);
+    }
+
+    public abstract void getLoot();
+
+    public abstract void attack(GameCharacter enemy);
+
+    public EnemyType getType() {
+        return type;
+    }
+}
+
+----------------------
+ package rpg.entities.enemies;
+
+import rpg.entities.GameCharacter;
+import rpg.enums.EnemyType;
+
+    
+public abstract class Enemy {
+    private String name;
+    private EnemyType type;
+
+    public Enemy(String name) {
+        this.name = name;
+    }
+
+    public abstract void getLoot();
+
+    public abstract void attack(GameCharacter enemy);
+
+    public EnemyType getType() {
+        return type;
+    }
+
+    public void setType(EnemyType type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+//** esto es lo que me dio la ia y lo cheque en el editor y por si solo no tiene errores que imposibilitarian que corran
