@@ -21,6 +21,16 @@ public class Player extends GameCharacter {
         this.stats = new EnumMap<>(Stats.class); // Usar EnumMap para seguridad de tipo
         this.stats.put(Stats.HP, health);
         this.stats.put(Stats.ATTACK, attackPower);
+
+
+        
+    @Override
+    public void initCharacter() {
+        getStats().put(Stats.HEALTH, 100);
+        getStats().put(Stats.ATTACK, 20);
+        getStats().put(Stats.DEFENSE, 10);
+        getStats().put(Stats.SPEED, 5);
+    }
     }
 
     /* Método getter para obtener el nombre */
