@@ -2,11 +2,15 @@
  * Clase Player que representa al jugador en el juego.
  * Gestiona las estadísticas del jugador, ataques y el estado actual.
  */
+package rpg.entities;
+
+import rpg.enums.Stats;
+
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
 
 //Estadisticas del Jugador
-public class Player {
+public class Player extends GameCharacter {
 
     private String name;
     private EnumMap<Stats, Integer> stats;
@@ -64,8 +68,3 @@ public class Player {
     }
 }
 
-/* Enum que define las estadísticas del jugador */
-enum Stats {
-    ATTACK,  // Poder de ataque
-    HP       // Salud
-}
