@@ -1,3 +1,8 @@
+/* 
+   Esta clase representa a un enemigo genérico del juego. 
+   Proporciona propiedades como nombre, salud, poder de ataque, defensa y descripción.
+   Define comportamientos como recibir daño, atacar y mostrar información del enemigo.
+*/
 import javax.swing.*;
 
 public abstract class Enemy {
