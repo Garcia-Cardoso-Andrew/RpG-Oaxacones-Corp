@@ -1,3 +1,9 @@
+/*
+   Esta clase representa un enemigo específico en el juego, el Therizino.
+   Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Therizino.
+*/
+
+
 public class Therizino extends Enemy {
     public Therizino() {
         super("Therizinosaurus", 80, 30, 10, "Un herbívoro gigante con garras enormes.");
