@@ -1,3 +1,8 @@
+/*
+   Esta clase es el punto de entrada principal del juego. 
+   Configura el entorno gráfico, solicita el nombre del jugador y lanza el juego.
+*/
+
 import javax.swing.*;
 import java.awt.*;
 
