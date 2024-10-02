@@ -1,3 +1,9 @@
+/*
+   Esta clase representa al jugador en el juego, manejando sus estadísticas como salud, ataque y defensa.
+   Utiliza un EnumMap para gestionar las estadísticas del jugador de forma segura y tipada.
+   Además, permite que el jugador ataque enemigos, reciba daño y muestre su información.
+*/
+
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
 
