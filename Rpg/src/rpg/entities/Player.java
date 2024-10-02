@@ -1,6 +1,6 @@
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
-
+import Rpg.src.rpg.enums.Stats;
 public class Player {
     private String name;
     private EnumMap<Stats, Integer> stats;
@@ -86,11 +86,4 @@ public class Player {
                 "\nDefensa: " + getStat(Stats.DEFENSE);
         JOptionPane.showMessageDialog(null, info, "Estadísticas del jugador", JOptionPane.INFORMATION_MESSAGE);
     }
-}
-
-/* Enum que define las estadísticas del jugador */
-enum Stats {
-    ATTACK,  // Poder de ataque
-    HP,       // Salud
-    DEFENSE  // defensa
 }
