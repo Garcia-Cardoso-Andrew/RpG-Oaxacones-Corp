@@ -1,3 +1,8 @@
+/*
+   Esta clase representa el flujo principal del juego en el que el jugador lucha contra varios enemigos. 
+   Proporciona la lógica para gestionar los turnos del jugador y los enemigos, así como el inicio y final del juego.
+*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
