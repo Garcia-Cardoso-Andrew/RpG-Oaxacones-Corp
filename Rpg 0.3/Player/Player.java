@@ -3,7 +3,7 @@
    Utiliza un EnumMap para gestionar las estadísticas del jugador de forma segura y tipada.
    Además, permite que el jugador ataque enemigos, reciba daño y muestre su información.
 */
-
+package rpg.entities;
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
 
