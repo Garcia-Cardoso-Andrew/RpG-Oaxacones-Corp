@@ -2,10 +2,11 @@
    Esta clase es el punto de entrada principal del juego. 
    Configura el entorno gráfico, solicita el nombre del jugador y lanza el juego.
 */
+package Game;
+import Player.Player;
 
 import javax.swing.*;
 import java.awt.*;
-
 public class GameLauncher {
     public static void main(String[] args) {
         // Configurar la fuente a Times New Roman para todas las ventanas emergentes
