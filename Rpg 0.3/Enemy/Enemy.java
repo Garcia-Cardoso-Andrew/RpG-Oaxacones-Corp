@@ -3,7 +3,8 @@
    Proporciona propiedades como nombre, salud, poder de ataque, defensa y descripción.
    Define comportamientos como recibir daño, atacar y mostrar información del enemigo.
 */
-package rpg.entities.enemies;
+package Enemy;
+import Player.Player;
 
 import javax.swing.*;
 
