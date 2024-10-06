@@ -3,11 +3,12 @@
    Proporciona la lógica para gestionar los turnos del jugador y los enemigos, así como el inicio y final del juego.
 */
 
+import Enemy.Enemys.*;
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import Player.Player;
+import Enemy.Enemy;
 public class Game {
     private Player player;
     private List<Enemy> enemies;
