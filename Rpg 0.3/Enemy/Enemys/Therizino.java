@@ -3,7 +3,9 @@
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Therizino.
 */
 
-
+package Enemy.Enemys;
+import Player.Player;
+import Enemy.Enemy;
 public class Therizino extends Enemy {
     public Therizino() {
         super("Therizinosaurus", 80, 30, 10, "Un herbívoro gigante con garras enormes.");
