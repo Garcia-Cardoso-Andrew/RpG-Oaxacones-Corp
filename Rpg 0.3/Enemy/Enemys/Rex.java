@@ -2,7 +2,9 @@
    Esta clase representa un enemigo específico en el juego, el Rex.
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Rex.
 */
-
+package Enemy.Enemys;
+import Player.Player;
+import Enemy.Enemy;
 public class Rex extends Enemy {
     public Rex() {
         super("Rex", 100, 40, 20,"Un dinosaurio rápido y mortal con garras afiladas.");
