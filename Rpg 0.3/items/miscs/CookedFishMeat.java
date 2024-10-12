@@ -2,7 +2,7 @@ package items.miscs;
 
 import Player.*;
 
-public class CookedFishMeat extends Misc {
+public  abstract class CookedFishMeat extends Misc {
     private int healthRestore;
 
     public CookedFishMeat() {
@@ -16,4 +16,5 @@ public class CookedFishMeat extends Misc {
         // Aquí aplicaríamos la lógica para restaurar la salud del jugador
         player.restoreHealth(healthRestore);
     }
+
 }

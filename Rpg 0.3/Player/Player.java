@@ -30,6 +30,7 @@ public class Player {
         return getStat(Stats.HP) > 0; // Usar el método getStat para consistencia
     }
 
+
     /* Método para atacar a un enemigo */
     public void attack(Enemy enemy) {
         if (!isAlive()) {
@@ -91,6 +92,13 @@ public class Player {
                 "\nPoder de ataque: " + getStat(Stats.ATTACK) +
                 "\nDefensa: " + getStat(Stats.DEFENSE);
         JOptionPane.showMessageDialog(null, info, "Estadísticas del jugador", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void putStat(enums.Stats stats, int value) {
+    }
+
+    public int getStat(enums.Stats stats) {
+        return 0;
     }
 }
 

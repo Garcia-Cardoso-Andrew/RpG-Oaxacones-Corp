@@ -7,7 +7,7 @@ public abstract class Item {
     protected String description;
     protected ItemType itemType;
 
-    public Item(String name, String description, int price, ItemType itemType) {
+    public Item() {
         this.name = name;
         this.description = description;
         this.itemType = itemType;

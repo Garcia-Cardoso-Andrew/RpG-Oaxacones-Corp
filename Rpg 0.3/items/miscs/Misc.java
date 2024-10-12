@@ -7,8 +7,8 @@ public abstract class Misc extends Item {
     private boolean stackable;
 
     public Misc(String consumable, String stackable) {
-        this.consumable = consumable;
-        this.stackable = stackable;
+        this.consumable = Boolean.parseBoolean ( consumable );
+        this.stackable = Boolean.parseBoolean ( stackable );
     }
 
     public boolean isConsumable() {
@@ -19,6 +19,4 @@ public abstract class Misc extends Item {
         return stackable;
     }
 
-    // Abstract method to be implemented by subclasses
-    public abstract void use();
 }

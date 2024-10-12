@@ -15,4 +15,5 @@ public class CookedPrimeMeat extends Misc {
         // Aquí aplicaríamos la lógica para restaurar la salud del jugador
         player.restoreHealth(healthRestore);
 }
+
 }

@@ -1,36 +1,35 @@
 package items;
-import java.util.HashMap;
 import java.util.Map;
-import items.Item;
+
 import enums.*;
 public abstract class Equipment extends Item {
     private Slot slot;
-    private Rarity rarity;
-    private Map<Stat, Integer> stats;
+    private Map<Stats, Integer> stats;
 
-    public Equipment(Slot slot, Rarity rarity, Map<Stat, Integer> stats) {
+    public Equipment(Slot slot, Map<Stats, Integer> stats) {
+        super ();
         this.slot = slot;
-        this.rarity = rarity;
         this.stats = stats;
+    }
+
+    public Equipment(String arco, String description, int i, ItemType Arma) {
+        super ();
     }
 
     public Slot getSlot() {
         return slot;
     }
 
-    public Rarity getRarity() {
-        return rarity;
-    }
 
-    public Map<Stat, Integer> getStats() {
+    public Map<Stats, Integer> getStats() {
         return stats;
     }
 
-    public int getStatValue(Stat stat) {
+    public int getStatValue(Stats stat) {
         return stats.get(stat);
     }
 
-    public void setStatValue(Stat stat, int value) {
+    public void setStatValue(Stats stat, int value) {
         stats.put(stat, value);
     }
 }

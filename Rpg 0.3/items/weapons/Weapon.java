@@ -1,20 +1,21 @@
 package items.weapons;
 
 import enums.ItemType;
-import enums.WeaponType;
 import items.Equipment;
 
-import java.util.HashMap;
-
 public abstract class Weapon extends Equipment {
-    protected WeaponType weaponType;
+    private int attackBonus;
 
-    public Weapon(String name, String description, int price, WeaponType weaponType) {
-        super(name, description, price, ItemType.Arma);
-        this.weaponType = weaponType;
+    public Weapon(String name, int attackBonus) {
+        super(name, description, Integer.parseInt ( "Arma de tipo " + name ), ItemType.Armadura );
+        this.attackBonus = attackBonus;
     }
 
-    public WeaponType getWeaponType() {
-        return weaponType;
+    public int getAttackBonus() {
+        return attackBonus;
+    }
+
+    public void displayItemInfo() {
+        System.out.println("Arma: " + getName() + " | Bono de ataque: " + attackBonus);
     }
 }

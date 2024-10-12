@@ -1,6 +1,6 @@
 package items.miscs;
-import Player.*
-public class BattleTartare extends Misc {
+import Player.*;
+public abstract class BattleTartare extends Misc {
     private int attackBoost;
     private int defenseBoost;
     private int duration;
@@ -19,4 +19,6 @@ public class BattleTartare extends Misc {
         // Aquí aplicaríamos lógica para aumentar temporalmente ataque y defensa
         // Puede implicar un seguimiento de turnos y reducción de los efectos al expirar
     }
+
+
 }

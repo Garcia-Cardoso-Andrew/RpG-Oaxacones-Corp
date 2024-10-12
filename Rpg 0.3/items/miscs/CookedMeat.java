@@ -16,5 +16,10 @@ public class CookedMeat extends Misc {
         // Aquí aplicaríamos la lógica para restaurar la salud del jugador
         player.restoreHealth(healthRestore);
     }
+
+    @Override
+    public void use() {
+
+    }
 }
 
