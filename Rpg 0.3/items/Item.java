@@ -9,7 +9,6 @@ public abstract class Item {
 
     public Item() {
         this.name = name;
-        this.description = description;
         this.itemType = itemType;
     }
 

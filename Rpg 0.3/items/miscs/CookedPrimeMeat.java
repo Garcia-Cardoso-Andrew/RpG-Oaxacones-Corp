@@ -9,7 +9,7 @@ public class CookedPrimeMeat extends Misc {
         this.healthRestore = 35;
     }
 
-    @Override
+
     public void use(Player player) {
         System.out.println("Has consumido Cooked Prime Meat. Salud recuperada: " + healthRestore + ".");
         // Aquí aplicaríamos la lógica para restaurar la salud del jugador

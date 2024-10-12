@@ -10,7 +10,7 @@ public abstract class MedicalBrew extends Misc {
         this.healingAmount = 50;
     }
 
-    @Override
+
     public void use(Player player) {
         int currentHealth = player.getStat ( Stats.HP );
         player.putStat ( Stats.HP, currentHealth + healingAmount );

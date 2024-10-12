@@ -10,16 +10,12 @@ public class CookedMeat extends Misc {
         this.healthRestore = 20;
     }
 
-    @Override
+
     public void use(Player player) {
         System.out.println("Has consumido Cooked Meat. Salud recuperada: " + healthRestore + ".");
         // Aquí aplicaríamos la lógica para restaurar la salud del jugador
         player.restoreHealth(healthRestore);
     }
 
-    @Override
-    public void use() {
-
-    }
 }
 

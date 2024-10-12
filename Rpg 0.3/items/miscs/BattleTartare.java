@@ -12,7 +12,7 @@ public abstract class BattleTartare extends Misc {
         this.duration = 3;
     }
 
-    @Override
+
     public void use(Player player) {
         System.out.println("Has consumido Battle Tartare. Ataque aumentado en " + attackBoost +
                 " y defensa aumentada en " + defenseBoost + " por " + duration + " turnos.");

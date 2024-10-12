@@ -30,7 +30,6 @@ public class Player {
         return getStat(Stats.HP) > 0; // Usar el método getStat para consistencia
     }
 
-
     /* Método para atacar a un enemigo */
     public void attack(Enemy enemy) {
         if (!isAlive()) {

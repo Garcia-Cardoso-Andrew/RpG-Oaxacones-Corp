@@ -3,8 +3,8 @@ package items.miscs;
 import items.Item;
 
 public abstract class Misc extends Item {
-    private boolean consumable;
-    private boolean stackable;
+    private final boolean consumable;
+    private final boolean stackable;
 
     public Misc(String consumable, String stackable) {
         this.consumable = Boolean.parseBoolean ( consumable );

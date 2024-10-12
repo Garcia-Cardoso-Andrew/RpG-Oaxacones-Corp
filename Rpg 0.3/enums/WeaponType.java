@@ -1,9 +1,9 @@
 package enums;
 
 public enum WeaponType {
-    lanza,
-    hacha,
-    pistola,
-    arco,
+    bow,
+    Spear,
+    sword,
+    axe,
     batebonk,
 }
