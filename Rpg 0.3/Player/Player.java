@@ -102,7 +102,7 @@ public class Player {
 }
 
 /* Enum que define las estadísticas del jugador */
-enum Stats {
+public enum Stats {
     ATTACK,  // Poder de ataque
     HP,       // Salud
     DEFENSE  // defensa

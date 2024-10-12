@@ -2,20 +2,21 @@ package items.miscs;
 
 
 import Player.*;
+import enums.Stats;
+
 public class CookedMeat extends Misc {
-    private int healthRestore;
+    private int healingAmount;
 
     public CookedMeat() {
         super("Cooked Meat", "Recupera 20 de salud.");
-        this.healthRestore = 20;
+        this.healingAmount = 20;
     }
 
 
     public void use(Player player) {
-        System.out.println("Has consumido Cooked Meat. Salud recuperada: " + healthRestore + ".");
-        // Aquí aplicaríamos la lógica para restaurar la salud del jugador
-        player.restoreHealth(healthRestore);
+        int currentHealth = player.getStat ( enums.Stats.HP );
+        player.putStat ( Stats.HP, currentHealth + healingAmount );
+        System.out.println ( "Has usado una Coked Meat. Salud restaurada en " + healingAmount );
     }
-
 }
 

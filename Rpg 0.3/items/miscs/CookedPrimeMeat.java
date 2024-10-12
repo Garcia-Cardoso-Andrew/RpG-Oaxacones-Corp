@@ -2,18 +2,17 @@ package items.miscs;
 
 import Player.*;
 public class CookedPrimeMeat extends Misc {
-    private int healthRestore;
+    private int healingAmount;
 
     public CookedPrimeMeat() {
-        super("Cooked Prime Meat", "Recupera 35 de salud.");
-        this.healthRestore = 35;
+        super ( "Cooked Prime Meat", "Recupera 35 de salud." );
+        this.healingAmount = 35;
     }
 
 
     public void use(Player player) {
-        System.out.println("Has consumido Cooked Prime Meat. Salud recuperada: " + healthRestore + ".");
-        // Aquí aplicaríamos la lógica para restaurar la salud del jugador
-        player.restoreHealth(healthRestore);
-}
-
+        int currentHealth = player.getStat ( Stats.HP );
+        player.putStat ( Stats.HP, currentHealth + healingAmount );
+        System.out.println ( "Has usado un CookedMeat Salud restaurada en " + currentHealth );
+    }
 }
