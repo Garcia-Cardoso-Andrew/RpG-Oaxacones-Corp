@@ -12,6 +12,9 @@ public abstract class Item {
         this.itemType = itemType;
     }
 
+    public Item(ItemType itemType) {
+    }
+
     public String getName() {
         return name;
     }
