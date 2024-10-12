@@ -1,6 +1,6 @@
 package items.miscs;
 
-
+import Player.*;
 public class CookedPrimeMeat extends Misc {
     private int healthRestore;
 
