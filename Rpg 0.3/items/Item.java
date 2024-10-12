@@ -1,16 +1,16 @@
 package items;
 
 import enums.ItemCategory;
-import enums.ItemType;
+
 
 public abstract class Item {
     protected String name;
     protected String description;
-    protected ItemType itemType;
+    protected ItemCategory itemCategory;
 
     public Item() {
         this.name = name;
-        this.itemType = itemType;
+        this.itemCategory = itemCategory;
     }
 
     public Item(ItemCategory itemType) {
@@ -25,7 +25,7 @@ public abstract class Item {
     }
 
 
-    public ItemType getItemType() {
-        return itemType;
+    public ItemCategory getItemType() {
+        return ItemCategory;
     }
 }
