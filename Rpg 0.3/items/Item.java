@@ -26,6 +26,6 @@ public abstract class Item {
 
 
     public ItemCategory getItemType() {
-        return ItemCategory;
+        return itemCategory;
     }
 }
