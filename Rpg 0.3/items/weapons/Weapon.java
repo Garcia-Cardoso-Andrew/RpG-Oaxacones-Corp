@@ -4,18 +4,18 @@ import enums.ItemType;
 import items.Equipment;
 
 public abstract class Weapon extends Equipment {
-    private int attackBonus;
+    private int defenseBonus;
 
     public Weapon(String name, int attackBonus) {
-        super(name, Integer.parseInt ( "Arma de tipo " + name ), ItemType.Armadura );
-        this.attackBonus = attackBonus;
+        super(name, Integer.parseInt ( "Arma de tipo " + name ), ItemType.Arma );
+        this.defenseBonus = attackBonus;
     }
 
     public int getAttackBonus() {
-        return attackBonus;
+        return defenseBonus;
     }
 
     public void displayItemInfo() {
-        System.out.println("Arma: " + getName() + " | Bono de ataque: " + attackBonus);
+        System.out.println("Armadura: " + getName() + " | Bono de defensa: " + defenseBonus);
     }
 }

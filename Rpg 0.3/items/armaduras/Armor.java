@@ -1,27 +1,21 @@
 package items.armaduras;
 
-import enums.ArmorType;
 import enums.ItemType;
-import enums.Slot;
-import enums.Stats;
 import items.Equipment;
 
-import java.util.Map;
-
 public abstract class Armor extends Equipment {
-        protected ArmorType armorType;
+    private int defenseBonus;
 
-        public Armor(String name, String description, int price, ArmorType armorType) {
-            super(name, price, ItemType.Armadura);
-            this.armorType = armorType;
-        }
-
-    public Armor(Slot slot, Map<Stats, Integer> stats) {
-        super ( slot, stats );
+    public Armor(String name, int defenseBonus) {
+        super(name, Integer.parseInt ( "Armadura de tipo " + name ), ItemType.Armadura );
+        this.defenseBonus = defenseBonus;
     }
 
-    public ArmorType getArmorType() {
-            return armorType;
-        }
+    public int getAttackBonus() {
+        return defenseBonus;
     }
 
+    public void displayItemInfo() {
+        System.out.println("Arma: " + getName() + " | Bono de ataque: " + defenseBonus);
+    }
+}
