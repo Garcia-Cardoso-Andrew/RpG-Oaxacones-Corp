@@ -12,7 +12,7 @@ public abstract class Equipment extends Item {
         this.stats = stats;
     }
 
-    public Equipment(String arco, String description, int i, ItemType Arma) {
+    public Equipment(String arco, int i, ItemType Arma) {
         super ();
     }
 

@@ -12,7 +12,7 @@ public abstract class Armor extends Equipment {
         protected ArmorType armorType;
 
         public Armor(String name, String description, int price, ArmorType armorType) {
-            super(name, description, price, ItemType.Armadura);
+            super(name, price, ItemType.Armadura);
             this.armorType = armorType;
         }
 

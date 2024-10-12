@@ -7,7 +7,7 @@ public abstract class Weapon extends Equipment {
     private int attackBonus;
 
     public Weapon(String name, int attackBonus) {
-        super(name, description, Integer.parseInt ( "Arma de tipo " + name ), ItemType.Armadura );
+        super(name, Integer.parseInt ( "Arma de tipo " + name ), ItemType.Armadura );
         this.attackBonus = attackBonus;
     }
 
