@@ -2,7 +2,7 @@ package items.miscs;
 import Player.*;
 import enums.Stats;
 
-public abstract class MedicalBrew extends Misc {
+public  class MedicalBrew extends Misc {
     private int healingAmount;
 
     public MedicalBrew() {

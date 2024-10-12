@@ -1,5 +1,6 @@
 package items;
 
+import enums.ItemCategory;
 import enums.ItemType;
 
 public abstract class Item {
@@ -12,7 +13,7 @@ public abstract class Item {
         this.itemType = itemType;
     }
 
-    public Item(ItemType itemType) {
+    public Item(ItemCategory itemType) {
     }
 
     public String getName() {

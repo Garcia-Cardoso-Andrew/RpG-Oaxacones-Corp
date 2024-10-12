@@ -2,7 +2,7 @@ package items.miscs;
 
 import Player.*;
 
-public  abstract class CookedFishMeat extends Misc {
+public   class CookedFishMeat extends Misc {
     private int healthRestore;
 
     public CookedFishMeat() {

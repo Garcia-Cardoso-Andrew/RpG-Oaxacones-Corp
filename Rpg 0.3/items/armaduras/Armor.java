@@ -1,13 +1,14 @@
 package items.armaduras;
 
-import enums.ItemType;
+import enums.ItemCategory;
+
 import items.Equipment;
 
 public abstract class Armor extends Equipment {
     private int defenseBonus;
 
     public Armor(String name, int defenseBonus) {
-        super(name, Integer.parseInt ( "Armadura de tipo " + name ), ItemType.Armadura );
+        super(name, Integer.parseInt ( "Armadura de tipo " + name ), ItemCategory.Armadura );
         this.defenseBonus = defenseBonus;
     }
 

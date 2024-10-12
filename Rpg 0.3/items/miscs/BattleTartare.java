@@ -1,6 +1,6 @@
 package items.miscs;
 import Player.*;
-public abstract class BattleTartare extends Misc {
+public  class BattleTartare extends Misc {
     private int attackBoost;
     private int defenseBoost;
     private int duration;

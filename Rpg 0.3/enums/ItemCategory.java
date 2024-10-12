@@ -1,7 +1,8 @@
 package enums;
 
-public enum ItemType  {
+public enum ItemCategory {
     Arma,
     Armadura,
     Miscelaneo,
+
 }
