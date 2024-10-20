@@ -9,9 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import Player.Player;
 import Enemy.Enemy;
+import gui.*;
 public class Game {
-    private Player player;
-    private List<Enemy> enemies;
+    private final Player player;
+    private final List<Enemy> enemies;
 
     public Game(Player player) {
         this.player = player;
@@ -80,6 +81,11 @@ public class Game {
     private void enemyTurn(Enemy enemy) {
         // Implementa la lógica para el turno del enemigo
         enemy.attack(player);
+    }
+
+    public static void main(String[] args) {
+        // Crear una instancia de GUIForm para mostrar la ventana principal
+        SwingUtilities.invokeLater ( GUIForm::new );
     }
 }
 
