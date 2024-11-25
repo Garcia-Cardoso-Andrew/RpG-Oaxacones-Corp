@@ -1,10 +1,25 @@
 package gui.windows;
 
+import gui.labels.PortraitLabel;
+import gui.windows.UIConstants;
+import gui.buttons.*;
+import gui.panels.*;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class MainWindow extends JFrame implements WindowConstants {
+    private final JPanel mainPanel;
+    private JPanel topPanel;
+    private JPanel middlePanel;
+    private JPanel bottomPanel;
+    private BaseButton button1;
+    private BaseButton b2;
+    private BaseButton b3;
+    private AttackButton atacarButton;
+    private SkillPanelButton habilidadesButton;
+    private FleeButton huirButton;
+    private PortraitLabel exampleLabel;
 
     public MainWindow() {
         // Establecer el título de la ventana
@@ -17,28 +32,16 @@ public class MainWindow extends JFrame implements WindowConstants {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Inicializar los paneles
-        JPanel statusBar = new JPanel ();
-        JPanel gamePanel = new JPanel ();
-        JPanel actionBar = new JPanel ();
+        createUIComponents();
 
-        // Configurar los tamaños de los paneles
-        statusBar.setPreferredSize(new Dimension(WINDOW_WIDTH, 150)); // Barra de Estado
-        gamePanel.setPreferredSize(new Dimension(WINDOW_WIDTH, 370)); // Panel de Juego
-        actionBar.setPreferredSize(new Dimension(WINDOW_WIDTH, 340)); // Barra de Acción
-
-        // Establecer colores de fondo
-        statusBar.setBackground(Color.LIGHT_GRAY); // Color de fondo para la barra de estado
-        gamePanel.setBackground(Color.GREEN); // Color de fondo para el panel de juego
-        actionBar.setBackground(Color.BLUE); // Color de fondo para la barra de acción
-
-        // Establecer el layout del panel principal
-        JPanel mainPanel = new JPanel();
+        // Configurar el layout del panel principal
+        mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS)); // Layout vertical
 
         // Agregar los paneles al panel principal
-        mainPanel.add( statusBar );
-        mainPanel.add( gamePanel );
-        mainPanel.add( actionBar );
+        mainPanel.add(topPanel);
+        mainPanel.add(middlePanel);
+        mainPanel.add(bottomPanel);
 
         // Establecer el contenido del panel
         setContentPane(mainPanel);
@@ -50,4 +53,36 @@ public class MainWindow extends JFrame implements WindowConstants {
         setVisible(true);
     }
 
+    private void createUIComponents() {
+        topPanel = new TopPanel();
+        middlePanel = new MiddlePanel();
+        bottomPanel = new BottomPanel();
+        button1 = new BaseButton(UIConstants.BUTTON_1_TEXT) {
+            @Override
+            protected void initIcons() {
+
+            }
+        };
+        b2 = new BaseButton(UIConstants.TIENDAS_BUTTON_TEXT) {
+            @Override
+            protected void initIcons() {
+
+            }
+        };
+        b3 = new BaseButton(UIConstants.INVENTARIO_BUTTON_TEXT) {
+            @Override
+            protected void initIcons() {
+
+            }
+        };
+        atacarButton = new AttackButton();
+        habilidadesButton = new SkillPanelButton();
+        huirButton = new FleeButton();
+        exampleLabel = new PortraitLabel();
+    }
+
+    public static void main(String[] args) {
+        // Ejecutar la interfaz gráfica en el hilo de despacho de eventos
+        SwingUtilities.invokeLater(MainWindow::new);
+    }
 }

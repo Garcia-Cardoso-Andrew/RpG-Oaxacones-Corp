@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileManager {
-    private String filename;
+    private final String filename;
 
     public FileManager(String filename) {
         this.filename = filename;

@@ -1,13 +1,12 @@
 package factory;
 
-import entities.enemy.EnemyType;
+import entities.Enemy.EnemyType;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
 import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
-import entities.enemy.Enemy;
-
+import entities.Enemy.Enemy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -16,13 +15,11 @@ import java.util.Set;
 public class EnemyFactory {
 
     private static final Random random = new Random();
+    private static final Reflections reflections = new Reflections(new ConfigurationBuilder()
+            .setUrls(ClasspathHelper.forJavaClassPath())
+            .setScanners(new SubTypesScanner(), new FieldAnnotationsScanner()));
 
     public static Enemy getEnemy() {
-        // Configura Reflections para buscar clases en el classpath
-        Reflections reflections = new Reflections(new ConfigurationBuilder()
-                .setUrls(ClasspathHelper.forJavaClassPath())
-                .setScanners(new SubTypesScanner(), new FieldAnnotationsScanner()));
-
         // Obtiene todas las clases que extienden de Enemy
         Set<Class<? extends Enemy>> enemyClasses = reflections.getSubTypesOf(Enemy.class);
         List<Class<? extends Enemy>> classList = filterList(enemyClasses, EnemyType.BASIC);
@@ -36,11 +33,12 @@ public class EnemyFactory {
     }
 
     private static Enemy createRandomEnemy(List<Class<? extends Enemy>> classList) {
+        int randomIndex = random.nextInt(classList.size());
         try {
-            int randomIndex = random.nextInt(classList.size());
             return classList.get(randomIndex).getDeclaredConstructor().newInstance();
         } catch (Exception e) {
-            e.printStackTrace(); // Manejo de excepciones mejorado
+            // Manejo de excepciones mejorado
+            System.err.println("Error al crear una instancia de Enemy: " + e.getMessage());
             return null;
         }
     }
@@ -49,15 +47,20 @@ public class EnemyFactory {
         List<Class<? extends Enemy>> classListFiltered = new ArrayList<>();
 
         for (Class<? extends Enemy> enemyClass : classSet) {
-            try {
-                Enemy enemy = enemyClass.getDeclaredConstructor().newInstance();
-                if (enemy.getType() == enemyType) {
-                    classListFiltered.add(enemyClass);
-                }
-            } catch (Exception e) {
-                e.printStackTrace(); // Manejo de excepciones mejorado
+            if (isEnemyType(enemyClass, enemyType)) {
+                classListFiltered.add(enemyClass);
             }
         }
         return classListFiltered;
+    }
+
+    private static boolean isEnemyType(Class<? extends Enemy> enemyClass, EnemyType enemyType) {
+        try {
+            Enemy enemy = enemyClass.getDeclaredConstructor().newInstance();
+            return enemy.getType() == enemyType;
+        } catch (Exception e) {
+            System.err.println("Error al determinar el tipo de enemigo: " + e.getMessage());
+            return false; // Si hay un error, no se incluye la clase en la lista
+        }
     }
 }

@@ -3,7 +3,7 @@
    Proporciona propiedades como nombre, salud, poder de ataque, defensa y descripción.
    Define comportamientos como recibir daño, atacar y mostrar información del enemigo.
 */
-package entities.enemy;
+package entities.Enemy;
 
 import entities.GameCharacter;
 import entities.Player.Player;

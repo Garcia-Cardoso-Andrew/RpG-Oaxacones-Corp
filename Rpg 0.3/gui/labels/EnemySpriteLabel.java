@@ -1,6 +1,6 @@
 package gui.labels;
 
-import entities.enemy.Enemy;
+import entities.Enemy.Enemy;
 import gui.ui.EnemyLabelUI;
 
 import javax.swing.*;

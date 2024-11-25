@@ -1,4 +1,4 @@
-package entities.enemy;
+package entities.Enemy;
 
 public enum EnemyType {
     BASIC,   // Enemigos básicos

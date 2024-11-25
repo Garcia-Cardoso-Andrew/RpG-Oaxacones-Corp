@@ -6,7 +6,7 @@
 package entities.Player;
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
-import entities.enemy.Enemy;
+import entities.Enemy.Enemy;
 public class Player {
     private final String name;
     private final EnumMap<Stats, Integer> stats;

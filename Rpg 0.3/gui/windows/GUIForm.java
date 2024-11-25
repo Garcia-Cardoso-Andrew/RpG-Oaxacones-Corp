@@ -1,6 +1,8 @@
 package gui.windows;
 
 
+import gui.buttons.GameMenu;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -20,5 +22,9 @@ public class GUIForm extends JFrame {
 
         setContentPane(panel);
         setVisible(true); // Hacer visible la ventana
+    }
+    public static void main(String[] args) {
+        // Ejecutar la interfaz gráfica en el hilo de despacho de eventos
+        SwingUtilities.invokeLater(GUIForm::new);
     }
 }

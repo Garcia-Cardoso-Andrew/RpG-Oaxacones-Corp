@@ -2,10 +2,10 @@
    Esta clase representa un enemigo específico en el juego, el Spinosaurus.
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Spinosaurus.
 */
-package entities.enemy.Enemys;
+package entities.Enemy.Enemys;
 import entities.GameCharacter;
 import entities.Player.Player;
-import entities.enemy.Enemy;
+import entities.Enemy.Enemy;
 
 import javax.swing.*;
 

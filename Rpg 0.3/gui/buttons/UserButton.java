@@ -1,6 +1,9 @@
 package gui.buttons;
 
 import gui.ui.HoverButtonUI;
+import gui.ui.UserHoverUI;
+
+import static javax.swing.text.StyleConstants.setIcon;
 
 public abstract class UserButton extends BaseButton {
 
@@ -14,6 +17,10 @@ public abstract class UserButton extends BaseButton {
         setIcon(null);
         setRolloverIcon(null);
         setUI(new HoverButtonUI());
+        // Agregamos los iconos a la caché de imágenes.
+        setIcon(null);
+        setRolloverIcon(null);
+        setUI(new UserHoverUI());
     }
 
     @Override

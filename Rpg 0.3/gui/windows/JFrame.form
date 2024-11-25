@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.MainWindow">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="true" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="6" left="0" bottom="0" right="6"/>
+    <constraints>
+      <xy x="1" y="31" width="862" height="544"/>
+    </constraints>
+    <properties>
+      <background color="#D9D9D9"/> <!-- Cambia a un color positivo -->
+      <enabled value="true"/>
+      <foreground color="#000000"/> <!-- Cambia a un color positivo -->
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="41ae3" layout-manager="GridLayoutManager" row-count="1" column-count="1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1"/>
+        </constraints>
+        <properties>
+          <background color="#D3D3D3"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <!-- Aquí puedes agregar componentes, por ejemplo: -->
+          <!-- <label text="Label 1"/> -->
+        </children>
+      </grid>
+      <grid id="a4893" layout-manager="GridLayoutManager" row-count="1" column-count="1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1"/>
+        </constraints>
+        <properties>
+          <background color="#B0B0B0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <!-- Aquí puedes agregar componentes -->
+        </children>
+      </grid>
+      <grid id="673fa" layout-manager="GridLayoutManager" row-count="1" column-count="1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1"/>
+        </constraints>

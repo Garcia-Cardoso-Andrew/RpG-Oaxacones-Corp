@@ -1,8 +1,8 @@
-import entities.enemy.Enemys.*;
+import entities.Enemy.Enemys.*;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import entities.enemy.Enemy;
+import entities.Enemy.Enemy;
 import entities.Game.Game;
 import entities.Player.Player;
 public class Main {
