@@ -1,35 +1,45 @@
 package gui.labels;
 
 import enums.BarType;
-import gui.ui.BarLabelUI;
 
 import javax.swing.*;
 
 public class BarLabel extends JLabel {
 
     private int barValue;
-    private int maxValue;
+    private final int maxValue;
     private final BarType type;
 
     public BarLabel(int value, int maxValue, BarType type) {
-
-        this.barValue = value;
         this.maxValue = maxValue;
         this.type = type;
-        initComponents();
-    }
-
-    public void initComponents() {
-
-        setBarValue(barValue);
-        setUI(new BarLabelUI(type));
+        setBarValue(value); // Inicializa el valor de la barra
+        setUI(new gui.ui.BarLabel (type)); // Configura la UI de la barra
     }
 
     public void setBarValue(int value) {
-
-        this.barValue = value;
-        setText(String.format("%d / %d", value, maxValue));
+        // Asegúrate de que el valor esté dentro de los límites
+        if (value < 0) {
+            barValue = 0;
+        } else if (value > maxValue) {
+            barValue = maxValue;
+        } else {
+            barValue = value;
+        }
+        setText(String.format("%d / %d", barValue, maxValue)); // Actualiza el texto mostrado
     }
 
-    // Otros métodos de la clase como los getters y setters
+    public int getBarValue() {
+        return barValue; // Getter para el valor de la barra
+    }
+
+    public int getMaxValue() {
+        return maxValue; // Getter para el valor máximo
+    }
+
+    public BarType getType() {
+        return type; // Getter para el tipo de barra
+    }
+
+    // Otros métodos adicionales pueden ser añadidos aquí según sea necesario
 }

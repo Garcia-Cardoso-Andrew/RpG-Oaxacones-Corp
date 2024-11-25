@@ -1,9 +1,7 @@
 package gui.labels;
 
-import entities.enemies.Enemy;
+import entities.enemy.Enemy;
 import gui.ui.EnemyLabelUI;
-import gui.ui.GameLabelUI;
-import utils.cache.ImageCache;
 
 import javax.swing.*;
 import java.awt.*;

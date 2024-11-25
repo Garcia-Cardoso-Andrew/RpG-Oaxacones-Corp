@@ -1,6 +1,6 @@
 package gui.ui;
 
-import gui.UIConstants;
+import gui.windows.UIConstants;
 import utils.cache.ImageCache;
 
 import javax.swing.*;

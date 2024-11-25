@@ -11,7 +11,7 @@ public enum Stats {
         HP,
         DEFENSE;
 
-        private Stats() {
+        Stats() {
         }
     }
 

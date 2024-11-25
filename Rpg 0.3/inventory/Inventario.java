@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 class Inventory {
 
-    private ArrayList<Item> items;
+    private final ArrayList<Item> items;
     private int capacity;
 
     public Inventory(int capacity) {

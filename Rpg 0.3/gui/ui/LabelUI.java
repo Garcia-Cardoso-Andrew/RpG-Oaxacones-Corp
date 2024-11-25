@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class LabelUI extends BasicLabelUI {
 
-    private Dimension size;
+    private final Dimension size;
     ImageIcon icon;
 
     public LabelUI(Dimension size, ImageIcon icon) {

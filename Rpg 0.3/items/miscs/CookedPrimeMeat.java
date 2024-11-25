@@ -1,8 +1,8 @@
 package items.miscs;
 
-import Player.*;
+import entities.Player.*;
 public class CookedPrimeMeat extends Misc {
-    private int healingAmount;
+    private final int healingAmount;
 
     public CookedPrimeMeat() {
         super ( "Cooked Prime Meat", "Recupera 35 de salud." );

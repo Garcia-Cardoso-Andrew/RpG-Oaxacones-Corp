@@ -5,7 +5,7 @@ import enums.ItemCategory;
 import items.Equipment;
 
 public abstract class Armor extends Equipment {
-    private int defenseBonus;
+    private final int defenseBonus;
 
     public Armor(String name, int defenseBonus) {
         super(name, Integer.parseInt ( "Armadura de tipo " + name ), ItemCategory.Armadura );

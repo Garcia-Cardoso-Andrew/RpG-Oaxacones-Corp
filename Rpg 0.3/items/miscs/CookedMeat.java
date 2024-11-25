@@ -1,11 +1,11 @@
 package items.miscs;
 
 
-import Player.*;
+import entities.Player.*;
 import enums.Stats;
 
 public class CookedMeat extends Misc {
-    private int healingAmount;
+    private final int healingAmount;
 
     public CookedMeat() {
         super("Cooked Meat", "Recupera 20 de salud.");

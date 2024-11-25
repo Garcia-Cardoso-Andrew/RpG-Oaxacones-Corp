@@ -1,15 +1,19 @@
 package gui.buttons;
 
-import gui.ui.UserHoverUI;
+import gui.ui.HoverButtonUI;
 
 public abstract class UserButton extends BaseButton {
 
     public UserButton(String text) {
         super(text);
-        // Agregamos los iconos a la caché de imágenes.
+        initializeButton();
+    }
+
+    private void initializeButton() {
+        // Agregar iconos a la caché de imágenes (actualmente no se inicializan)
         setIcon(null);
         setRolloverIcon(null);
-        setUI(new UserHoverUI());
+        setUI(new HoverButtonUI());
     }
 
     @Override

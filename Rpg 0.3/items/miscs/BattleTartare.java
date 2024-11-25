@@ -1,9 +1,9 @@
 package items.miscs;
-import Player.*;
+import entities.Player.*;
 public  class BattleTartare extends Misc {
-    private int attackBoost;
-    private int defenseBoost;
-    private int duration;
+    private final int attackBoost;
+    private final int defenseBoost;
+    private final int duration;
 
     public BattleTartare() {
         super("Battle Tartare", "Aumenta el ataque y la defensa por 3 turnos.");

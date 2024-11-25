@@ -1,12 +1,10 @@
-import Enemy.Enemys.Rex;
-import Enemy.Enemys.Therizino;
+import entities.enemy.Enemys.*;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import Enemy.Enemy;
-import Enemy.Enemys.Raptor;
-import Game.Game;
-import Player.Player;
+import entities.enemy.Enemy;
+import entities.Game.Game;
+import entities.Player.Player;
 public class Main {
     public static void main(String[] args) {
         // Crear un jugador

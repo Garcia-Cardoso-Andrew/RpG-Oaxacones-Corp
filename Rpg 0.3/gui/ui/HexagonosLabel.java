@@ -1,6 +1,7 @@
-package rpg.gui.labels;
+package gui.ui;
 
-import gui.UIConstants;
+import gui.windows.UIConstants;
+import gui.labels.PortraitLabel;
 import utils.cache.ImageCache;
 
 import javax.swing.*;

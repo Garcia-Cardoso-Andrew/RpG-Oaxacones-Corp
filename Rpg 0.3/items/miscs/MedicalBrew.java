@@ -1,9 +1,9 @@
 package items.miscs;
-import Player.*;
+import entities.Player.*;
 import enums.Stats;
 
 public  class MedicalBrew extends Misc {
-    private int healingAmount;
+    private final int healingAmount;
 
     public MedicalBrew() {
         super ( "Medical Brew", "Restaura 50 puntos de salud." );
