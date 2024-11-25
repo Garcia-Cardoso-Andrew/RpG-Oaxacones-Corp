@@ -6,7 +6,7 @@ import utils.cache.ImageCache;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class BottomPanel extends BackgorundPanel {
+public class BottomPanel extends BackgroundPanel {
 
     @Override
     protected void init() {
@@ -21,10 +21,5 @@ public class BottomPanel extends BackgorundPanel {
 
     private void setDimension(int middleDimension) {
 
-        setDimension(WindowConstants.MIDDLE_DIMENSION);
-        setBorder(WindowConstants.EMPTY_BORDER);
-    }
-
-    private void setBorder(int emptyBorder) {
     }
 }

@@ -1,14 +1,18 @@
 package gui.buttons;
 
+<<<<<<< Updated upstream
 import gui.ui.HoverButtonUI;
+=======
 import gui.ui.UserHoverUI;
 
 import static javax.swing.text.StyleConstants.setIcon;
+>>>>>>> Stashed changes
 
 public abstract class UserButton extends BaseButton {
 
     public UserButton(String text) {
         super(text);
+<<<<<<< Updated upstream
         initializeButton();
     }
 
@@ -17,10 +21,12 @@ public abstract class UserButton extends BaseButton {
         setIcon(null);
         setRolloverIcon(null);
         setUI(new HoverButtonUI());
+=======
         // Agregamos los iconos a la caché de imágenes.
         setIcon(null);
         setRolloverIcon(null);
         setUI(new UserHoverUI());
+>>>>>>> Stashed changes
     }
 
     @Override

@@ -21,6 +21,8 @@ public class MainWindow extends JFrame implements WindowConstants {
     private FleeButton huirButton;
     private PortraitLabel exampleLabel;
 
+    private JPanel mainPanel;
+
     public MainWindow() {
         // Establecer el título de la ventana
         setTitle("RPG Game");
