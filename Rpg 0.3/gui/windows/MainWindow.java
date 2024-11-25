@@ -6,6 +6,8 @@ import java.awt.*;
 
 public class MainWindow extends JFrame implements WindowConstants {
 
+    private JPanel mainPanel;
+
     public MainWindow() {
         // Establecer el título de la ventana
         setTitle("RPG Game");
