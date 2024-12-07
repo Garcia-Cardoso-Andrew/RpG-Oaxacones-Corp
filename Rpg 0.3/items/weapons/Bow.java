@@ -1,7 +1,7 @@
 package items.weapons; 
 // Define el paquete `items.weapons`, que organiza esta clase dentro del módulo de objetos tipo "armas".
 
-public class Bow extends Weapon { 
+public abstract class Bow extends Weapon {
     // Declara una clase pública llamada `Bow` que extiende la clase base `Weapon`.
     // Representa un arma específica, en este caso un arco.
 

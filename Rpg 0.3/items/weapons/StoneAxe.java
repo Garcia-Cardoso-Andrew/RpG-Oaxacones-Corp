@@ -1,7 +1,7 @@
 package items.weapons; 
 // Define el paquete `items.weapons`, que organiza esta clase dentro del módulo de objetos relacionados con armas.
 
-public class StoneAxe extends Weapon { 
+public abstract class StoneAxe extends Weapon {
     // Declara una clase pública llamada `StoneAxe` que extiende la clase base `Weapon`.
     // Representa un arma específica: un hacha de piedra.
 

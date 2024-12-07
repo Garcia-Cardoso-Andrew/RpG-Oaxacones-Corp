@@ -1,7 +1,7 @@
 package items.weapons; 
 // Define el paquete `items.weapons`, que agrupa todas las clases relacionadas con armas en el sistema del juego.
 
-public class Sword extends Weapon { 
+public abstract class Sword extends Weapon {
     // Declara la clase `Sword` (Espada) como una subclase de `Weapon`.
     // Esta clase representa un arma específica, en este caso, una espada.
 
