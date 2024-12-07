@@ -1,13 +1,13 @@
 package items.miscs; 
 // Define el paquete al que pertenece esta clase. Organiza el código en módulos.
 
-import entity.Player.*; 
+import entities.Player.*;
 // Importa todas las clases públicas dentro del paquete 'Player', necesarias para interactuar con objetos relacionados al jugador.
 
 import enums.Stats; 
 // Importa el enum Stats, que probablemente contiene las estadísticas de un jugador, como HP (puntos de salud).
 
-public class CookedFishMeat extends Misc { 
+public abstract class CookedFishMeat extends Misc {
     // Define una clase pública llamada CookedFishMeat que hereda de la clase Misc.
     // Representa un objeto "Carne de pescado cocida" que es un tipo de objeto genérico Misc (probablemente "Misceláneo").
 
@@ -24,7 +24,7 @@ public class CookedFishMeat extends Misc {
 
     public void use(Player player) { 
         // Define un método público que se ejecuta cuando el jugador utiliza este objeto.
-        int currentHealth = player.getStat(enums.Stats.HP); 
+        int currentHealth = player.getStats (enums.Stats.HP);
         // Obtiene la salud actual del jugador utilizando su método getStat() y el enum Stats.HP.
 
         player.putStat(Stats.HP, currentHealth + healingAmount); 

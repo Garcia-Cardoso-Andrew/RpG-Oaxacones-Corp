@@ -7,7 +7,7 @@ import entities.Player.*;
 import enums.Stats; 
 // Importa el enum `Stats`, que probablemente define las estadísticas del jugador, como puntos de salud (`HP`).
 
-public class MedicalBrew extends Misc { 
+public abstract class MedicalBrew extends Misc {
     // Declara una clase pública llamada `MedicalBrew` que extiende la clase base `Misc`.
     // Representa un objeto consumible "Breve Médica" que restaura una cantidad fija de salud.
 
@@ -24,7 +24,7 @@ public class MedicalBrew extends Misc {
 
     public void use(Player player) { 
         // Método público que se ejecuta cuando el jugador usa este objeto.
-        int currentHealth = player.getStat(Stats.HP); 
+        int currentHealth = player.getStats (Stats.HP);
         // Obtiene la salud actual del jugador mediante el método `getStat` del objeto `Player`.
 
         player.putStat(Stats.HP, currentHealth + healingAmount); 

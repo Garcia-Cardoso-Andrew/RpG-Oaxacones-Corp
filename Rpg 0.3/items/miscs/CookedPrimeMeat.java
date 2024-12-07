@@ -4,7 +4,7 @@ package items.miscs;
 import entities.Player.*; 
 // Importa todas las clases públicas del paquete `entities.Player`, necesarias para interactuar con el jugador.
 
-public class CookedPrimeMeat extends Misc { 
+public abstract class CookedPrimeMeat extends Misc {
     // Declara una clase pública llamada `CookedPrimeMeat` que extiende la clase `Misc`.
     // Representa un objeto especial de "Carne Premium Cocida", que proporciona mayor curación.
 

@@ -5,7 +5,7 @@ import entities.Player.*;
 
 // La clase 'BattleTartare' representa un objeto consumible que mejora las estadísticas del jugador temporalmente.
 // Extiende la clase base 'Misc', lo que implica que es un elemento misceláneo en el sistema de juego.
-public class BattleTartare extends Misc {
+public abstract class BattleTartare extends Misc {
 
     // Atributos finales que definen los efectos del objeto:
     private final int attackBoost;  // Incremento en el ataque.
