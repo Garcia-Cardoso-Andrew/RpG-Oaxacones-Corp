@@ -33,10 +33,7 @@ public abstract class Item implements Serializable {
      * Constructor de la clase Item. Inicializa los atributos de la clase mediante
      * la función initItem().
      */
-    public Item() {
 
-        initItem();
-    }
 
     /**
      * Función que inicializa los atributos de la clase actual.
