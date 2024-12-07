@@ -12,7 +12,7 @@ public  class MedicalBrew extends Misc {
 
 
     public void use(Player player) {
-        int currentHealth = player.getStat ( Stats.HP );
+        int currentHealth = player.getStats ( Stats.HP );
         player.putStat ( Stats.HP, currentHealth + healingAmount );
         System.out.println ( "Has usado una Medical Brew. Salud restaurada en " + healingAmount );
     }

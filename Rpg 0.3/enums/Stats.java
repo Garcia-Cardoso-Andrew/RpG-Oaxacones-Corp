@@ -9,8 +9,8 @@ package enums;
 public enum Stats {
         ATTACK,
         HP,
-        DEFENSE;
-
+        LEVEL;
+        public static final int EXPERIENCE = 98;
         Stats() {
         }
     }

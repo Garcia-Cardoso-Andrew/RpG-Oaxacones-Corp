@@ -41,5 +41,8 @@ public class BarLabel extends JLabel {
         return type; // Getter para el tipo de barra
     }
 
+    public void updateBar(Integer integer, Integer integer1) {
+    }
+
     // Otros métodos adicionales pueden ser añadidos aquí según sea necesario
 }

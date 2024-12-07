@@ -1,12 +1,15 @@
 package entities.Game;
 
+import entities.enemy.Enemy;
+import entities.enemy.Enemys.*;
+
 import gui.windows.GUIForm;
-import entities.Enemy.Enemys.*;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import entities.Player.Player;
-import entities.Enemy.Enemy;
+
 
 /**
  * Esta clase representa el flujo principal del juego en el que el jugador lucha contra varios enemigos.

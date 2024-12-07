@@ -6,18 +6,40 @@
 package entities.Player;
 import java.util.EnumMap;
 import javax.swing.JOptionPane;
-import entities.Enemy.Enemy;
+import entities.enemy.Enemy;
+import exceptions.ItemNotFoundException;
+import inventory.Inventory;
+import items.Item;
+import inventory.Inventory;
+import items.armaduras.Armor;
+import items.miscs.Misc;
+
 public class Player {
-    private final String name;
-    private final EnumMap<Stats, Integer> stats;
+    private String name = "";
+    private EnumMap<Stats, Integer> stats;
 
     /* Constructor que inicializa el jugador con su nombre y estadísticas */
     public Player(String name, int health, int attackPower, int Defense) {
         this.name = name;
-        this.stats = new EnumMap<>(Stats.class); // Usar EnumMap para seguridad de tipo
-        this.stats.put(Stats.HP, health);
-        this.stats.put(Stats.ATTACK, attackPower);
-        this.stats.put(Stats.DEFENSE,Defense); // Añadir la estadística de defensa
+        this.stats = new EnumMap<> ( Stats.class ); // Usar EnumMap para seguridad de tipo
+        this.stats.put ( Stats.HP, health );
+        this.stats.put ( Stats.ATTACK, attackPower );
+        this.stats.put ( Stats.DEFENSE, Defense ); // Añadir la estadística de defensa
+    }
+
+
+    public Player(String s, String name, EnumMap<Stats, Integer> stats) {
+
+        this.name = name;
+        this.stats = stats;
+    }
+
+    public Player(String s) {
+
+    }
+
+    public static Player load(int slot) {
+        return null;
     }
 
     /* Método getter para obtener el nombre */
@@ -27,24 +49,25 @@ public class Player {
 
     /* Verificar si el jugador está vivo (salud > 0) */
     public boolean isAlive() {
-        return getStat(Stats.HP) > 0; // Usar el método getStat para consistencia
+        return getStat ( Stats.HP ) > 0; // Usar el método getStat para consistencia
     }
 
     /* Método para atacar a un enemigo */
-    public void attack(Enemy enemy) {
-        if (!isAlive()) {
-            JOptionPane.showMessageDialog(null, name + " no puede atacar porque está muerto!");
-            return; // No permite atacar si el jugador está muerto
+    public String attack(Enemy enemy) {
+        if (!isAlive ()) {
+            JOptionPane.showMessageDialog ( null, name + " no puede atacar porque está muerto!" );
+            return null;
         }
-        int attackPower = getStat(Stats.ATTACK);
-        JOptionPane.showMessageDialog(null, name + " ataca a " + enemy.getName() + " por " + attackPower + " de daño!");
-        enemy.takeDamage(attackPower);
+        int attackPower = getStat ( Stats.ATTACK );
+        JOptionPane.showMessageDialog ( null, name + " ataca a " + enemy.getName () + " por " + attackPower + " de daño!" );
+        enemy.takeDamage ( attackPower );
+        return null;
     }
 
     /* Método para recibir daño de un enemigo */
     public void takeDamage(int damage) {
-        int currentDefense = getStat(Stats.DEFENSE);  // Obtener la defensa actual
-        int currentHealth = getStat(Stats.HP);        // Obtener la salud actual
+        int currentDefense = getStat ( Stats.DEFENSE );  // Obtener la defensa actual
+        int currentHealth = getStat ( Stats.HP );        // Obtener la salud actual
 
         if (currentDefense > 0) {
             if (currentDefense >= damage) {
@@ -67,37 +90,68 @@ public class Player {
         }
 
         // Actualizar las estadísticas
-        putStat(Stats.DEFENSE, currentDefense);
-        putStat(Stats.HP, currentHealth);
+        putStat ( Stats.DEFENSE, currentDefense );
+        putStat ( Stats.HP, currentHealth );
 
         // Mostrar mensaje con la información del daño y defensa restante
-        JOptionPane.showMessageDialog(null, name + " recibe " + damage + " de daño. " +
-                "Defensa restante: " + currentDefense + ". Salud restante: " + currentHealth);
+        JOptionPane.showMessageDialog ( null, name + " recibe " + damage + " de daño. " +
+                "Defensa restante: " + currentDefense + ". Salud restante: " + currentHealth );
     }
 
     /* Obtener el valor de una estadística específica */
     public int getStat(Stats stat) {
-        return stats.get(stat);
+        return stats.get ( stat );
     }
 
     /* Establecer el valor de una estadística específica */
     public void putStat(Stats stat, int value) {
-        stats.put(stat, value);
+        stats.put ( stat, value );
     }
 
     /* Mostrar la información del jugador en una ventana emergente */
     public void displayInfo() {
-        String info = "Jugador: " + name + "\nSalud: " + getStat(Stats.HP) +
-                "\nPoder de ataque: " + getStat(Stats.ATTACK) +
-                "\nDefensa: " + getStat(Stats.DEFENSE);
-        JOptionPane.showMessageDialog(null, info, "Estadísticas del jugador", JOptionPane.INFORMATION_MESSAGE);
+        String info = "Jugador: " + name + "\nSalud: " + getStat ( Stats.HP ) +
+                "\nPoder de ataque: " + getStat ( Stats.ATTACK ) +
+                "\nDefensa: " + getStat ( Stats.DEFENSE );
+        JOptionPane.showMessageDialog ( null, info, "Estadísticas del jugador", JOptionPane.INFORMATION_MESSAGE );
     }
 
     public void putStat(enums.Stats stats, int value) {
     }
 
-    public int getStat(enums.Stats stats) {
+    public int getStats(enums.Stats stats) {
         return 0;
+    }
+
+    public ThreadLocal<Object> getStats() {
+        return null;
+    }
+
+    public boolean tryToFlee() {
+        return false;
+    }
+
+    public void levelUp() {
+    }
+
+    public void save(int slot) {
+    }
+
+
+    public void showInventory() {
+
+        StringBuilder content = new StringBuilder ( "Inventory: \n" );
+        String format = """
+                Name: %s, Price: %d
+                Description: %s
+                """;
+        String formatQuantity = """
+                Name: %s, Price: %d, Quantity: %d
+                Description: %s
+                """;
+    }
+
+    public void addItemToInventory() {
     }
 }
 

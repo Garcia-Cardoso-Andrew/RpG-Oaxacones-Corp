@@ -1,12 +1,13 @@
 package factory;
 
 import entities.Enemy.EnemyType;
+import entities.enemy.Enemy;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
 import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
-import entities.Enemy.Enemy;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

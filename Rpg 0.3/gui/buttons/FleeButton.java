@@ -1,18 +1,12 @@
 package gui.buttons;
 
-import gui.windows.UIConstants;
+import gui.windows.MainWindow;
 
-public class FleeButton extends BaseButton {
-    public FleeButton() {
-        super(UIConstants.HABILIDADES_BUTTON_TEXT);
-    }
+public class FleeButton extends UserButton {
 
-    public FleeButton(String text) {
-        super(text);
-    }
+    public FleeButton(MainWindow game) {
 
-    @Override
-    protected void initIcons() {
-
+        super("Huir");
+        addActionListener(e -> game.tryToFlee());
     }
 }

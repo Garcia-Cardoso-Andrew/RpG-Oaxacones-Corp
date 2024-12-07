@@ -1,6 +1,7 @@
 package gui.labels;
 
-import entities.Enemy.Enemy;
+import entities.enemy.Enemy;
+import entities.enemy.Enemy;
 import gui.ui.EnemyLabelUI;
 
 import javax.swing.*;
@@ -32,5 +33,11 @@ public class EnemySpriteLabel extends JLabel {
             icon = new ImageIcon(icon.getImage().getScaledInstance(450, 250, Image.SCALE_SMOOTH));
         }
         return new Dimension(icon.getIconWidth(), icon.getIconHeight());
+    }
+
+
+
+    public void setEnemy(Enemy enemy) {
+
     }
 }

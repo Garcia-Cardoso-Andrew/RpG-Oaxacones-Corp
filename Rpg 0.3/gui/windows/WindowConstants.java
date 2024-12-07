@@ -2,7 +2,7 @@ package gui.windows;
 
 import java.awt.*;
 
-import static gui.windows.UIConstants.TOP_HEIGHT;
+import static gui.ui.UIConstants.TOP_HEIGHT;
 
 public interface WindowConstants {
     // Tamaño de la ventana

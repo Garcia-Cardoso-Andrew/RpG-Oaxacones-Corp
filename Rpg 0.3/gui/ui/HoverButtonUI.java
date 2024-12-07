@@ -1,10 +1,6 @@
 package gui.ui;
 
-<<<<<<< Updated upstream
-import gui.windows.UIConstants;
-=======
-import gui.UIConstants;
->>>>>>> Stashed changes
+import gui.ui.UIConstants;
 import utils.cache.ImageCache;
 
 import javax.swing.*;

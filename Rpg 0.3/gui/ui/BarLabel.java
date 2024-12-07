@@ -1,7 +1,6 @@
 package gui.ui;
 
 import enums.BarType;
-import gui.windows.UIConstants;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicLabelUI;

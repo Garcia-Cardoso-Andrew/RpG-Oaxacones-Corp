@@ -12,7 +12,7 @@ public   class CookedFishMeat extends Misc {
     }
 
     public void use(Player player) {
-        int currentHealth = player.getStat ( enums.Stats.HP );
+        int currentHealth = player.getStats ( enums.Stats.HP );
         player.putStat ( Stats.HP, currentHealth + healingAmount );
         System.out.println ( "Has usado una CookedFhishMeat. Salud restaurada en " + healingAmount );
     }

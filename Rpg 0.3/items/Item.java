@@ -1,20 +1,48 @@
 package items;
 
 import enums.ItemCategory;
+import utils.cache.ImageCache;
 
+import javax.swing.*;
+import java.io.Serializable;
 
-public abstract class Item {
+/**
+ * The type Item.
+ */
+public abstract class Item implements Serializable {
+
+    /**
+     * The Name.
+     */
     protected String name;
+    protected String iconName;
+    /**
+     * The Description.
+     */
     protected String description;
-    protected ItemCategory itemCategory;
+    /**
+     * The Price.
+     */
+    protected int price;
+    /**
+     * The Type.
+     */
+    protected ItemCategory type;
 
+    /**
+     * Constructor de la clase Item. Inicializa los atributos de la clase mediante
+     * la función initItem().
+     */
     public Item() {
-        this.name = name;
-        this.itemCategory = itemCategory;
+
+        initItem();
     }
 
-    public Item(ItemCategory itemType) {
-    }
+    /**
+     * Función que inicializa los atributos de la clase actual.
+     * Deberá ser implementada y sobreescrita por las clases hijas.
+     */
+    protected abstract void initItem();
 
     public String getName() {
         return name;
@@ -24,8 +52,17 @@ public abstract class Item {
         return description;
     }
 
+    public int getPrice() {
+        return price;
+    }
 
-    public ItemCategory getItemType() {
-        return itemCategory;
+    public ItemCategory getType() {
+        return type;
+    }
+
+    public ImageIcon getIcon() {
+        return new ImageIcon(ImageCache
+                .getImage(iconName)
+                .getScaledInstance(32, 32, 0));
     }
 }

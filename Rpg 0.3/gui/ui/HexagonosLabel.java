@@ -1,6 +1,5 @@
 package gui.ui;
 
-import gui.windows.UIConstants;
 import gui.labels.PortraitLabel;
 import utils.cache.ImageCache;
 
