@@ -2,10 +2,10 @@
    Esta clase representa un enemigo específico en el juego, el Raptor.
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Raptor.
 */
-package entities.Enemy.Enemys;
+package entities.enemy.Enemys;
 import entities.GameCharacter;
 import entities.Player.Player;
-import entities.Enemy.Enemy;
+import entities.enemy.Enemy;
 
 import javax.swing.*;
 
@@ -15,9 +15,10 @@ public class Raptor extends Enemy {
     }
 
     @Override
-    public void attack(Player player) {
+    public String attack(Player player) {
         System.out.println(getName() + " ataca con ferocidad!");
         player.takeDamage(attackPower);
+        return null;
     }
 
     @Override

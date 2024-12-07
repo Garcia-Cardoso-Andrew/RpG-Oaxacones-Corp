@@ -2,11 +2,10 @@
    Esta clase representa un enemigo específico en el juego, el Rex.
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Rex.
 */
-package entities.Enemy.Enemys;
+package entities.enemy.Enemys;
 import entities.GameCharacter;
 import entities.Player.Player;
-import entities.Enemy.Enemy;
-
+import entities.enemy.Enemy;
 import javax.swing.*;
 
 public class Rex extends Enemy {
@@ -15,10 +14,11 @@ public class Rex extends Enemy {
     }
 
     @Override
-    public void attack(Player player) {
+    public String attack(Player player) {
         // Usar getName() si 'name' es privado en Enemy
         System.out.println(getName() + " lanza un poderoso mordisco!");
         player.takeDamage(getAttackPower());  // Usar getAttackPower() si attackPower es privado
+        return null;
     }
 
     @Override

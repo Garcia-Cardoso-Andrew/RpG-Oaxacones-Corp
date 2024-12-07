@@ -3,11 +3,10 @@
    Extiende la clase Enemy y personaliza las estadísticas y el comportamiento de ataque del Therizino.
 */
 
-package entities.Enemy.Enemys;
+package entities.enemy.Enemys;
 import entities.GameCharacter;
 import entities.Player.Player;
-import entities.Enemy.Enemy;
-
+import entities.enemy.Enemy;
 import javax.swing.*;
 
 public class Therizino extends Enemy {
@@ -16,10 +15,11 @@ public class Therizino extends Enemy {
     }
 
     @Override
-    public void attack(Player player) {
+    public String attack(Player player) {
         // Usar el método getName() para obtener el nombre del enemigo
         System.out.println(getName() + " ataca con sus enormes garras!");
         player.takeDamage(getAttackPower());  // Usar getAttackPower() para obtener el poder de ataque
+        return null;
     }
 
     @Override
