@@ -21,6 +21,8 @@ public class Raptor extends Enemy {
     public Raptor() {
         // Llamada al constructor de la clase padre con las estadísticas específicas del Raptor
         super("Raptor", 50, 20, "Un dinosaurio rápido y mortal con garras afiladas.");
+        ImageCache.addImage("Raptor", "enemigos/Raptor.png");
+
 
         // Tipo ya asignado por la clase padre, así que el método getRandomEnemyType() es innecesario.
         // Si deseas asegurarte de que el tipo de enemigo sea aleatorio, mantén el método de la clase padre.

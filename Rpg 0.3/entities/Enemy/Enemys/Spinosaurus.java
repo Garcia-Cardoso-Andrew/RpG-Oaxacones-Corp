@@ -21,6 +21,8 @@ public class Spinosaurus extends Enemy {
     public Spinosaurus() {
         // Llamada al constructor de la clase padre con las estadísticas específicas del Spinosaurus
         super("Spinosaurus", 110, 50,  "Un dinosaurio rápido y mortal con garras afiladas.");
+        ImageCache.addImage("Spinosaurus", "enemigos/Spinosaurus.png");
+
 
         // Asignación aleatoria del tipo de enemigo (BASIC, ALPHA, BOSS)
         EnemyType randomType = getRandomEnemyType();

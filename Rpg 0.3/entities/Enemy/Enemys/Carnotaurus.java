@@ -13,9 +13,12 @@ import javax.swing.*;
  */
 public class Carnotaurus extends Enemy {
 
+
     // Constructor que inicializa el Carnotaurus con sus estadísticas
     public Carnotaurus() {
         super("Carnotaurus", 150, 50,  "Un depredador con cuernos, fuerte y ágil.");
+        ImageCache.addImage("Carnotaurus", "enemigos/Carnotaurus.png");
+
     }
 
     /**

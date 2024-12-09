@@ -16,6 +16,8 @@ public class Rex extends Enemy {
     // Constructor que inicializa el Rex con sus estadísticas
     public Rex() {
         super("Tyrannosaurus Rex", 200, 70,  "Un dinosaurio carnívoro enorme y extremadamente peligroso.");
+        ImageCache.addImage("Rex", "enemies/Rex.png");
+
     }
 
     /**

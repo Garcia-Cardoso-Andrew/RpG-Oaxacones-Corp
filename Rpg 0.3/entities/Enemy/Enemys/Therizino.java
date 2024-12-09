@@ -16,6 +16,8 @@ public class Therizino extends Enemy {
     // Constructor que inicializa el Therizino con sus estadísticas
     public Therizino() {
         super("Therizinosaurus", 80, 30, "Un herbívoro gigante con garras enormes.");
+        ImageCache.addImage("Therizinosaurus", "enemigos/Therizinosaurus.png");
+
     }
 
     /**
