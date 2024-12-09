@@ -1,50 +1,42 @@
 package gui.buttons;
 
+import entities.Player.Player;
+import gui.windows.MainWindow;
+import utils.cache.ImageCache;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class BaseButton extends JButton {
+/**
+ * Clase base para la creación de botones personalizados en la interfaz gráfica.
+ * Extiende la clase JButton y establece el comportamiento básico de los botones en el juego.
+ */
+public  class BaseButton extends JButton {
 
+    /**
+     * Constructor de la clase BaseButton.
+     * Inicializa el botón con el texto proporcionado y aplica una interfaz personalizada de botón con efectos de hover.
+     * @param text El texto que aparecerá en el botón.
+     */
     public BaseButton(String text) {
-        super(text);
-        initButton();
-    }
 
-    private void initButton() {
-        // Configuraciones iniciales del botón
-        setFocusPainted(false);
-        setBorderPainted(false);
-        setContentAreaFilled(false);
-        setOpaque(true);
-        setForeground(Color.WHITE);
-        setBackground(Color.BLUE);
-    }
-
-    // Método para agregar un ActionListener
-    public void addAction(ActionListener actionListener) {
-        addActionListener(actionListener);
-    }
-
-    // Método para cambiar el texto del botón
-    public void setButtonText(String text) {
+        // Establece el texto del botón
         setText(text);
+
+        // Aplica un estilo personalizado al botón, que incluye efectos visuales cuando el ratón pasa sobre él (hover)
+        setUI(new HoverButtonUI());
     }
 
-    // Método para habilitar o deshabilitar el botón
-    public void setEnabledState(boolean enabled) {
-        setEnabled(enabled);
+    public BaseButton(MainWindow mainWindow, Player player, int slot) {
     }
 
-    // Método para establecer el color de fondo
-    public void setButtonBackground(Color color) {
-        setBackground(color);
+    public BaseButton() {
+
     }
 
-    // Método para establecer el color del texto
-    public void setButtonForeground(Color color) {
-        setForeground(color);
-    }
+    protected void initIcons() {
 
-    protected abstract void initIcons();
+    }
 }

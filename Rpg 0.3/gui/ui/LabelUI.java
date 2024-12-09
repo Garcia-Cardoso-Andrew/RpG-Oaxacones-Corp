@@ -3,6 +3,7 @@ package gui.ui;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicLabelUI;
 import java.awt.*;
+import gui.windows.WindowConstants;
 
 public class LabelUI extends BasicLabelUI {
 

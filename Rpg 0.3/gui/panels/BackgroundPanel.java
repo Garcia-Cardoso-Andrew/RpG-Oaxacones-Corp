@@ -1,15 +1,10 @@
 package gui.panels;
 
 import utils.cache.ImageCache;
-
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Clase abstracta que define un panel con una imagen de fondo.
- */
 public abstract class BackgroundPanel extends JPanel {
-
     /**
      * Imagen de fondo del panel.
      */
@@ -33,7 +28,7 @@ public abstract class BackgroundPanel extends JPanel {
      *
      * @param dimension Dimensiones del panel.
      */
-    public void setDimension(Dimension dimension) {
+    protected void setDimension(Dimension dimension) {
         this.dimension = dimension;
         setPreferredSize(dimension);
         setMinimumSize(dimension);

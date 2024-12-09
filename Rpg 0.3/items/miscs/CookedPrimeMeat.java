@@ -19,15 +19,4 @@ public abstract class CookedPrimeMeat extends Misc {
         // Inicializa el atributo `healingAmount` con un valor fijo de 35.
     }
 
-    public void use(Player player) { 
-        // Método público que se ejecuta cuando el jugador utiliza este objeto.
-        int currentHealth = player.getStat(Stats.HP); 
-        // Obtiene la salud actual del jugador llamando al método `getStat` del objeto `Player`.
-
-        player.putStat(Stats.HP, currentHealth + healingAmount); 
-        // Incrementa la salud del jugador sumando `healingAmount` a su salud actual y actualiza esta estadística.
-
-        System.out.println("Has usado un Cooked Prime Meat. Salud restaurada en " + healingAmount); 
-        // Imprime un mensaje en la consola indicando que el objeto fue usado y la cantidad de salud restaurada.
-    }
 }

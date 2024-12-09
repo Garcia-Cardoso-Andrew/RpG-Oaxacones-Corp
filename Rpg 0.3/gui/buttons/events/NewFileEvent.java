@@ -1,10 +1,8 @@
 package gui.buttons.events;
 
-import entities.*;
 import entities.Player.Player;
 import gui.windows.MainWindow;
 import gui.windows.NewFileWindow;
-import gui.windows.StartWindow;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +21,12 @@ public class NewFileEvent implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         window.dispose();
-        Player player = new Player(window.getName());
+        Player player = new Player ( window.getName (), 100, 30, 50 ) {
+            @Override
+            public void takeDamage(int damage) {
+
+            }
+        };
         player.save(slot);
         new MainWindow(player, slot);
     }

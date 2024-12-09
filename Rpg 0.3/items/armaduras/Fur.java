@@ -2,7 +2,7 @@ package items.armaduras;
 
 // La clase 'Fur' representa una armadura específica hecha de piel.
 // Extiende la clase 'Armor', lo que significa que hereda todas las propiedades y métodos de esta clase base.
-public class Fur extends Armor {
+public abstract class Fur extends Armor {
 
     // Constructor de la clase 'Fur'.
     public Fur() {

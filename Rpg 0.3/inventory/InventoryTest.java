@@ -1,7 +1,6 @@
 package inventory;
 
 import entities.Player.Player;
-import items.armaduras.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +20,7 @@ public class InventoryTest {
         ObjectOutputStream oos = null;
         UIManager.put("OptionPane.messageFont",
                 new Font("Arial", Font.BOLD, 20));
-        Player player = new Player("Player 1");
+        Player player = new Player("Player 1", 100, 30, 50 );
         player.addItemToInventory();
         player.addItemToInventory();
         player.addItemToInventory();

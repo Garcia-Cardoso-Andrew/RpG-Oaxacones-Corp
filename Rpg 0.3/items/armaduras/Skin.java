@@ -2,7 +2,7 @@ package items.armaduras;
 
 // La clase 'Skin' representa una armadura específica hecha de pelaje.
 // Extiende la clase 'Armor', lo que significa que hereda todas las propiedades y métodos de esta clase base.
-public class Skin extends Armor {
+public abstract class Skin extends Armor {
 
     // Constructor de la clase 'Skin'.
     public Skin() {

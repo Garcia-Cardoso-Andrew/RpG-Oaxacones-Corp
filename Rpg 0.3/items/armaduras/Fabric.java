@@ -2,7 +2,7 @@ package items.armaduras;
 
 // La clase 'Fabric' representa una armadura específica hecha de tela.
 // Extiende la clase 'Armor', lo que significa que hereda todas las propiedades y métodos de la misma.
-public class Fabric extends Armor {
+public abstract class Fabric extends Armor {
 
     // Constructor de la clase 'Fabric'.
     public Fabric() {

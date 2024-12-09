@@ -1,10 +1,9 @@
 package gui.buttons;
 
 import gui.buttons.events.NewPlayerEvent;
-import gui.windows.NewFileWindow;
 import gui.windows.StartWindow;
 
-public class NewFileButton extends UserButton {
+public class NewFileButton extends BaseButton {
 
     int slot;
     StartWindow startWindow;

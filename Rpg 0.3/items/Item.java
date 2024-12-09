@@ -29,6 +29,13 @@ public abstract class Item implements Serializable {
      */
     protected ItemCategory type;
 
+    public Item(ItemCategory itemCategory) {
+    }
+
+    public Item() {
+
+    }
+
     /**
      * Constructor de la clase Item. Inicializa los atributos de la clase mediante
      * la función initItem().

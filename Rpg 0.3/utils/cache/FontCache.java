@@ -1,6 +1,6 @@
 package utils.cache;
 
-import java.awt.*;
+import java.awt.Font;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,10 +42,13 @@ public class FontCache {
      * @return Fuente a retornar de la caché o la fuente Arial en caso de que la fuente a buscar no exista.
      */
     public static Font getFont(String fontName, int style, int size) {
-
-        return cache.getOrDefault(fontName, Font.getFont("Arial")).deriveFont(style, size);
+        Font cachedFont = cache.get(fontName);
+        if (cachedFont != null) {
+            return cachedFont.deriveFont(style, size);
+        } else {
+            return new Font("Arial", style, size); // Cambiado para crear una nueva instancia de Font
+        }
     }
-
     /**
      * Método que se encarga de obtener una fuente de la caché.
      *

@@ -1,11 +1,13 @@
 package gui.ui;
 
-import gui.ui.UIConstants;
 import utils.cache.ImageCache;
+import gui.windows.WindowConstants;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.*;
+import utils.cache.FontCache;
+import utils.cache.FontLoader;
 
 public class HoverButtonUI extends BasicButtonUI {
 
@@ -18,7 +20,7 @@ public class HoverButtonUI extends BasicButtonUI {
     protected void installDefaults(AbstractButton b) {
 
         initParts();
-        b.setFont(UIConstants.FONT.deriveFont(Font.PLAIN, 24));
+        b.setFont(WindowConstants.DEFAULT_FONT.deriveFont(Font.PLAIN, 24));
         b.setForeground(Color.BLACK);
         b.setDoubleBuffered(true);
         b.setOpaque(false);

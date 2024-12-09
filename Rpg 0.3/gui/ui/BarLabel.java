@@ -6,6 +6,7 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicLabelUI;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import gui.windows.WindowConstants;
 
 public class BarLabel extends BasicLabelUI {
 
@@ -20,7 +21,7 @@ public class BarLabel extends BasicLabelUI {
         c.setOpaque(false);
         c.setBorder(null);
         c.setForeground(Color.WHITE);
-        c.setFont(UIConstants.BAR_LABEL_FONT);
+        c.setFont(WindowConstants.BAR_LABEL_FONT);
         c.setVerticalAlignment(JLabel.BOTTOM);
         c.setVerticalTextPosition(JLabel.BOTTOM);
         c.setHorizontalAlignment(JLabel.RIGHT);
@@ -65,12 +66,12 @@ public class BarLabel extends BasicLabelUI {
         // Calcular posiciones y dimensiones
         int iconX = 0;
         int iconY = 0;
-        int iconWidth = UIConstants.BAR_ICON.width;
-        int iconHeight = UIConstants.BAR_ICON.height;
+        int iconWidth = WindowConstants.BAR_ICON.width;
+        int iconHeight = WindowConstants.BAR_ICON.height;
         int displayX = iconWidth - 2;
         int displayY = iconY + 5;
-        int displayWidth = UIConstants.BAR_DISPLAY.width;
-        int displayHeight = UIConstants.BAR_DISPLAY.height;
+        int displayWidth = WindowConstants.BAR_DISPLAY.width;
+        int displayHeight = WindowConstants.BAR_DISPLAY.height;
         int barWidth = (int) ((double) barValue / maxValue * 157);
         int barHeight = 17;
         int barX = iconWidth + 9;
@@ -86,8 +87,8 @@ public class BarLabel extends BasicLabelUI {
     }
 
     private Dimension getBarWidth() {
-        Dimension iconSize = UIConstants.BAR_ICON;
-        Dimension displaySize = UIConstants.BAR_DISPLAY;
+        Dimension iconSize = WindowConstants.BAR_ICON;
+        Dimension displaySize = WindowConstants.BAR_DISPLAY;
         int width = iconSize.width + displaySize.width;
         return new Dimension(width, iconSize.height + 5);
     }

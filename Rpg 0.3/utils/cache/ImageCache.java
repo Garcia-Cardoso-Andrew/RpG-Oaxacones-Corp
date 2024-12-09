@@ -6,51 +6,66 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Clase que se encarga de almacenar en caché las imágenes que se cargan en la aplicación.
+ * Clase ImageCache que administra un caché de imágenes para evitar cargas repetidas desde el disco.
+ * Utiliza un mapa para almacenar las imágenes cargadas por nombre y ruta.
  */
 public class ImageCache {
 
-    private static final String IMAGE_PATH = "image/";
+    // Definición de la ruta base donde se encuentran las imágenes.
+    private static final String IMAGE_PATH = "Imagenes/";  // Ruta base para las imágenes
+
+    // Mapa estático para almacenar las imágenes cargadas.
     private static final Map<String, BufferedImage> CACHE = new HashMap<>();
 
     /**
-     * Función que se encarga de añadir una imagen a la caché.
-     *
-     * @param name Nombre de la imagen.
-     * @param path Ruta de la imagen.
+     * Método para agregar una imagen al caché.
+     * @param name Nombre clave para la imagen.
+     * @param path Ruta relativa de la imagen a cargar.
+     * @return La imagen cargada desde el archivo.
      */
     public static BufferedImage addImage(String name, String path) {
-
         BufferedImage image;
-        if (!CACHE.containsKey(name)) {
 
+        if (!CACHE.containsKey(name)) {
+            // Si la imagen no está en el caché, se carga desde el disco.
             image = ImageLoader.loadImage(IMAGE_PATH + path);
-            CACHE.put(name, image);
+
+            if (image != null) {
+                CACHE.put(name, image);  // Solo la agrega si se cargó correctamente.
+            } else {
+                System.err.println("Error: No se pudo cargar la imagen desde la ruta: " + IMAGE_PATH + path);
+                return null;  // Si la imagen no se carga, devuelve null.
+            }
         } else {
+            // Si la imagen ya está en el caché, se recupera.
             image = CACHE.get(name);
         }
         return image;
     }
 
     /**
-     * Función que se encarga de obtener una imagen de la caché.
-     *
-     * @param imageName Nombre de la imagen.
-     * @return Imagen a retornar de la cáche o null en caso de que la imagen a buscar no exista.
+     * Método para obtener una imagen desde el caché.
+     * @param imageName Nombre de la imagen que se desea obtener.
+     * @return La imagen solicitada o null si no está en el caché.
      */
     public static BufferedImage getImage(String imageName) {
-
-        return CACHE.getOrDefault(imageName, null);
+        return CACHE.getOrDefault(imageName, null);  // Devuelve la imagen o null si no existe.
     }
 
     /**
-     * Método que se encarga de obtener el tamaño de la caché.
-     *
-     * @param imageName Nombre de la imagen.
-     * @return ImageIcon de la imagen a retornar de la caché o null en caso de que la imagen a buscar no exista.
+     * Método para obtener un ImageIcon desde el caché.
+     * @param imageName Nombre de la imagen que se desea obtener.
+     * @return Un ImageIcon creado a partir de la imagen del caché.
      */
     public static ImageIcon getImageIcon(String imageName) {
-
-        return new ImageIcon(getImage(imageName));
+        BufferedImage image = getImage(imageName);
+        if (image != null) {
+            return new ImageIcon(image);
+        } else {
+            System.err.println("Error: La imagen no está disponible en el caché.");
+            return null;  // Devuelve null si la imagen no existe en el caché.
+        }
     }
 }
+
+

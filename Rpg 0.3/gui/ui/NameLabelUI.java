@@ -1,7 +1,7 @@
 package gui.ui;
 
 import utils.cache.ImageCache;
-
+import gui.windows.WindowConstants;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -25,7 +25,7 @@ public class NameLabelUI extends GameLabelUI {
     @Override
     protected void installDefaults(JLabel c) {
 
-        c.setFont(UIConstants.LABEL_FONT);
+        c.setFont(WindowConstants.LABEL_FONT);
         c.setForeground(Color.BLACK);
         c.setVerticalAlignment(JLabel.CENTER);
         c.setHorizontalAlignment(JLabel.CENTER);

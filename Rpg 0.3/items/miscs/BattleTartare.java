@@ -20,14 +20,4 @@ public abstract class BattleTartare extends Misc {
         this.defenseBoost = 5;   // Incremento fijo de defensa.
         this.duration = 3;       // Duración fija de 3 turnos.
     }
-
-    // Método para usar el objeto, que aplica sus efectos al jugador.
-    public void use(Player player) {
-        // Muestra un mensaje indicando los efectos del consumo del objeto.
-        System.out.println("Has consumido Battle Tartare. Ataque aumentado en " + attackBoost +
-                " y defensa aumentada en " + defenseBoost + " por " + duration + " turnos.");
-        // Aquí se implementaría la lógica para aplicar los efectos al jugador:
-        // - Aumentar temporalmente las estadísticas del jugador (ataque y defensa).
-        // - Implementar un sistema de seguimiento de turnos para eliminar los efectos después de 'duration' turnos.
-    }
 }

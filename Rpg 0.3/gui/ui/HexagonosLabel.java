@@ -5,12 +5,13 @@ import utils.cache.ImageCache;
 
 import javax.swing.*;
 import java.awt.*;
+import gui.windows.WindowConstants;
 
 public class HexagonosLabel extends PortraitLabel {
 
     public HexagonosLabel() {
         super();
-        setFont(UIConstants.LABEL_FONT.deriveFont(Font.BOLD, 20f));
+        setFont(WindowConstants.LABEL_FONT.deriveFont(Font.BOLD, 20f));
         setForeground(Color.BLACK);
         setVerticalAlignment(JLabel.CENTER);
         setHorizontalAlignment(JLabel.CENTER);

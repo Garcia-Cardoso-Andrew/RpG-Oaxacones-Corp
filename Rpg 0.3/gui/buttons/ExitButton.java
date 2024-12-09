@@ -1,6 +1,6 @@
 package gui.buttons;
 
-public class ExitButton extends UserButton {
+public class ExitButton extends BaseButton {
 
     public ExitButton() {
 

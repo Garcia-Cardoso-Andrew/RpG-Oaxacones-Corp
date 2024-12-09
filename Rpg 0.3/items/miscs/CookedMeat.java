@@ -4,7 +4,9 @@ package items.miscs;
 import entities.Player.*; 
 // Importa todas las clases públicas del paquete `entities.Player`, necesarias para interactuar con el jugador.
 
-import enums.Stats; 
+import enums.Stats;
+
+import java.util.HashMap;
 // Importa el enum `Stats`, que contiene estadísticas como `HP` (puntos de salud) utilizadas por el jugador.
 
 public abstract class CookedMeat extends Misc {
@@ -22,15 +24,5 @@ public abstract class CookedMeat extends Misc {
         // Inicializa el atributo `healingAmount` con un valor fijo de 20.
     }
 
-    public void use(Player player) { 
-        // Método público que se ejecuta cuando el jugador usa este objeto.
-        int currentHealth = player.getStats (enums.Stats.HP);
-        // Obtiene la salud actual del jugador llamando al método `getStat` del objeto `Player`.
 
-        player.putStat(Stats.HP, currentHealth + healingAmount); 
-        // Incrementa la salud del jugador sumando `healingAmount` a la salud actual y actualiza la estadística.
-
-        System.out.println("Has usado una Cooked Meat. Salud restaurada en " + healingAmount); 
-        // Muestra un mensaje en la consola indicando que el objeto fue usado y cuánto se restauró.
-    }
 }

@@ -1,40 +1,85 @@
-package items.miscs; 
-// Define el paquete al que pertenece la clase `Misc`. Esto organiza las clases relacionadas con objetos misceláneos.
+package items.miscs;
+// Paquete donde se encuentra la clase Misc, en el subpaquete "Miscs" dentro de "items".
 
-import enums.ItemCategory; 
-// Importa la enumeración `ItemCategory`, que probablemente contiene categorías para clasificar los objetos del juego.
+import items.Item;
+// Importa la clase base Item, de la que hereda Misc.
 
-import items.Item; 
-// Importa la clase base `Item`, de la cual `Misc` hereda propiedades y comportamientos comunes para todos los objetos.
+import java.io.Serializable;
+// Importa la interfaz Serializable, lo que permite que los objetos de esta clase puedan ser serializados (convertidos en una secuencia de bytes).
 
-public abstract class Misc extends Item { 
-    // Declara una clase abstracta `Misc` que extiende la clase `Item`.
-    // Es abstracta porque probablemente actúa como base para objetos específicos y no se puede instanciar directamente.
+/**
+ * The type Misc.
+ */
+// Clase abstracta que representa un tipo de objeto misceláneo en el juego.
+public abstract class Misc extends Item implements Serializable {
+    // La clase Misc es abstracta, extiende la clase Item, y puede ser serializada.
 
-    private final boolean consumable; 
-    // Atributo booleano que indica si el objeto puede ser consumido (por ejemplo, para restaurar salud).
+    /**
+     * The Consumable.
+     */
+    protected boolean consumable;
+    // Indica si el objeto es consumible (se consume al usarse).
 
-    private final boolean stackable; 
-    // Atributo booleano que indica si el objeto puede apilarse en el inventario (tener múltiples unidades juntas).
+    /**
+     * The Stackable.
+     */
+    protected boolean stackable;
+    // Indica si el objeto es apilable (puede almacenarse en varias cantidades en una misma ranura de inventario).
 
-    public Misc(String consumable, String stackable) { 
-        // Constructor de la clase `Misc`. Recibe los valores como cadenas de texto ("true"/"false").
-        super(ItemCategory.Miscelaneo); 
-        // Llama al constructor de la clase base `Item` y asigna la categoría del objeto como "Misceláneo".
-        this.consumable = Boolean.parseBoolean(consumable); 
-        // Convierte el valor de `consumable` de cadena a booleano y lo asigna al atributo correspondiente.
-        this.stackable = Boolean.parseBoolean(stackable); 
-        // Convierte el valor de `stackable` de cadena a booleano y lo asigna al atributo correspondiente.
+    protected int quantity;
+    // Cantidad actual del objeto.
+
+    protected int maxQuantity;
+    // Cantidad máxima que puede tener este objeto en una sola pila.
+
+    public Misc(String battleTartare, String s) {
+        // Constructor de la clase Misc.
+        super();
+        // Llama al constructor de la clase base Item.
+        maxQuantity = 99;
+        // Establece el valor máximo predeterminado de cantidad apilable en 99.
     }
 
-    public boolean isConsumable() { 
+    /**
+     * Use.
+     */
+    public abstract void use();
+    // Método abstracto que define el comportamiento al usar el objeto. Las clases derivadas deben implementar este método.
+
+    public boolean isConsumable() {
         // Método público que devuelve si el objeto es consumible.
-        return consumable; 
+        return consumable;
     }
 
-    public boolean isStackable() { 
+    public boolean isStackable() {
         // Método público que devuelve si el objeto es apilable.
-        return stackable; 
+        return stackable;
+    }
+
+    public int getQuantity() {
+        // Método público que devuelve la cantidad actual del objeto.
+        return quantity;
+    }
+
+    public void increaseQuantity(int amount) {
+        // Método público que incrementa la cantidad del objeto en una cantidad específica.
+        quantity += amount;
+        // Suma la cantidad especificada al valor actual de quantity.
+        if (quantity > maxQuantity) {
+            // Si la cantidad resultante es mayor que la cantidad máxima permitida...
+            quantity = maxQuantity;
+            // ...la cantidad se ajusta al valor máximo permitido.
+        }
+    }
+
+    public void decreaseQuantity(int amount) {
+        // Método público que disminuye la cantidad del objeto en una cantidad específica.
+        quantity -= amount;
+        // Resta la cantidad especificada al valor actual de quantity.
+        if (quantity < 0) {
+            // Si la cantidad resultante es menor que 0...
+            quantity = 0;
+            // ...la cantidad se ajusta a 0 para evitar valores negativos.
+        }
     }
 }
-

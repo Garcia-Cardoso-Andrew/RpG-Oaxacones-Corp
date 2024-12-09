@@ -2,7 +2,7 @@ package items.armaduras;
 
 // La clase 'chitin' representa una armadura específica hecha de quitina (chitin en inglés).
 // Extiende la clase 'Armor', lo que significa que hereda todas las propiedades y métodos de esta clase base.
-public class chitin extends Armor {
+public abstract class chitin extends Armor {
 
     // Constructor de la clase 'chitin'.
     public chitin() {
